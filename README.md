@@ -2,29 +2,22 @@
 
 Repositório com foco na disciplina de Banco de Dados 2 (referente ao trabalho integrado do 5º período - BSI - IFES).
 
-    O referido projeto poderá ser:
-        a) Um novo sistema/projeto 
-        b) Uma expansão de sistema/projeto previamente desenvolvido em disciplinas anteriores 
-        (ex: Expansão dos módulos do sistema desenvolvidos em BD1 - incremento mínimo de 50% nos 
-        requisitos/complexidade)
-        c) Nas avaliações parciais do professor, o grupo deverá anotar todas as observaçoes que forem feitas pelo professor 
-        e pelo proprio grupo, enviar uma cópia das atividades por e-mail para o grupo e postar imediatamente estas observaçõe
-        como tarefas a serem realizadas como tarefas por meio do gerenciador de projetos do git.
-        d) Todas as tarefas devem ser realizadas e deve-se atentar para distribuição igualitária de atividades levando-se 
-        em consideração o peso destas.
-        e) Os tópicos numerados para cada atividade no devem ser removidos do trabalho. Entretanto, os conteúdos de exemplo 
-        em cada tópico devem ser substituídos pelo conteúdo do trabalho em desenvolvimento.
-        f) sprints de entrega serão quinzenais ou mensais definidos em aula juntamente com o professor
-    
-    OBS Importantes: 
-        a) Os projetos/sistemas propostos serão validados pelo professor e pela turma
-        b) Se possível é interessante que os novos sistemas estejam correlacionados com alguma área 
-        previamente estudada pelo aluno
-        c) Caso dependa de alguma instituição/parceiro externo, a base de dados e informações pertinentes 
-        a esta devem ser obtidas no prazo de até 15 dias apos aprovação da proposta do trabalho 
-        (caso contrário, nova proposta deverá ser apresentada a turma implicando logicamente em um prazo 
-        mais curto para realização das atividades e conclusão do trabalho)
-    
+O referido projeto poderá ser:
+<ol type="A" style="font-size:10px;">
+<li>Um novo sistema/projeto</li>
+<li>Uma expansão de sistema/projeto previamente desenvolvido em disciplinas anteriores (ex: Expansão dos módulos do sistema desenvolvidos em BD1 - incremento mínimo de 50% nos requisitos/complexidade)</li>
+<li>Nas avaliações parciais do professor, o grupo deverá anotar todas as observaçoes que forem feitas pelo professor e pelo proprio grupo, enviar uma cópia das atividades por e-mail para o grupo e postar imediatamente estas observaçõe como tarefas a serem realizadas como tarefas por meio do gerenciador de projetos do git.</li>
+<li>Todas as tarefas devem ser realizadas e deve-se atentar para distribuição igualitária de atividades levando-se em consideração o peso destas.</li>
+<li>Os tópicos numerados para cada atividade no devem ser removidos do trabalho. Entretanto, os conteúdos de exemplo em cada tópico devem ser substituídos pelo conteúdo do trabalho em desenvolvimento.</li>
+<li>sprints de entrega serão quinzenais ou mensais definidos em aula juntamente com o professor</li>
+</ol>
+
+
+OBS Importantes: 
+###### a) Os projetos/sistemas propostos serão validados pelo professor e pela turma
+###### b) Se possível é interessante que os novos sistemas estejam correlacionados com alguma área previamente estudada pelo aluno
+###### c) Caso dependa de alguma instituição/parceiro externo, a base de dados e informações pertinentes a esta devem ser obtidas no prazo de até 15 dias apos aprovação da proposta do trabalho (caso contrário, nova proposta deverá ser apresentada a turma implicando logicamente em um prazo mais curto para realização das atividades e conclusão do trabalho)
+
 # Sumário<br>
 
 ### 1. COMPONENTES<br>
@@ -54,19 +47,21 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 </p><br>
 
 ### 4. RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
-neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
 
-Sugestão: https://balsamiq.com/products/mockups/<br>
-
-![Alt text](https://github.com/discipbd2/topicos-trabalho/blob/master/balsamiq.png?raw=true "Title")
+[Mockups](https://github.com/duraes-antonio/resolveae_bd2/blob/master/Documentacao/Mockups/resolveAE.pdf)
 
 
-### 5. MODELO CONCEITUAL<br>
+### 5. MODELAGEM<br>
 
 #### 5.1 NOTACAO ENTIDADE RELACIONAMENTO
-![Alt text](https://github.com/discipbd2/topicos-trabalho/blob/master/sample_MC.png?raw=true "Modelo Conceitual")
+
+<p align="center">
+    <img src="https://github.com/duraes-antonio/ResolveAE/blob/master/Documentacao/Diagramas/Imagens/modelo_er_conceitual.png"></p><br>
+    <a href="https://github.com/duraes-antonio/ResolveAE/blob/master/Documentacao/Diagramas/Arquivos/modelo_er_conceitual.brM3">Download brmodelo(.brM3)</a><br>
     
 #### 5.2 NOTACAO UML (Caso esteja fazendo a disciplina de Projeto)
+
+<p align="center"><img src="https://github.com/duraes-antonio/ResolveAE/blob/master/Documentacao/Diagramas/Imagens/diag_classe.svg"></p><br>
 
 ## Data de Entrega: (23/08/2018) 
 (Apresentação para o professor em sala de aula)
@@ -87,6 +82,11 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 
 ### 6. MODELO LÓGICO<br>
+
+<p align="center">
+    <img src="https://github.com/duraes-antonio/ResolveAE/blob/master/Documentacao/Diagramas/Imagens/modelo_er_logico.png"></p><br>
+    <a href="https://github.com/duraes-antonio/ResolveAE/blob/master/Documentacao/Diagramas/Arquivos/modelo_er_logico.brM3">Download brmodelo(.brM3)</a><br>
+
 ### 7. MODELO FÍSICO<br>
 ### 8. INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
