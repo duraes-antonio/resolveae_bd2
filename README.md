@@ -19,15 +19,14 @@ Repositório com foco na disciplina de Banco de Dados 2 (referente ao trabalho i
 
 ### 1. COMPONENTES<br>
 * Antônio Carlos D.:  [duraes-antonio](https://github.com/duraes-antonio)<br>
-* Elimar Macena:      [elimarmacena](https://github.com/elimarmacena)<br>
+* Elimar Macena:      [elimarmacena](https://github.com/elimarmacena)<br><br>
 
 ### 2. INTRODUÇÃO E MOTIVAÇAO<br>
 
 <p align="justify">
     Tão cansativa quanto ouvir um "meu sobrinho faz de graça" ou "o seu Zé Marosvaldo faz pela metade do preço", é a atividade de buscar por pessoas qualificadas e/ou com experiência na área.<br><br>
     Desta forma, a presença de uma plataforma que disponibilize informações sobre a formação e experiência do profissional e detalhes sobre o serviço prestado por ele, não só pode oferecer uma diversidade de especialistas e fomentar a competividade mas também a oferta de emprego e valorização do mercado de TI no Brasil.<br><br>
-    Entregar ao profissional de TI um histórico para controle e realização de estimativas com base nos serviços já prestados, uma descrição mais elaborada do potencial que ele pode oferecer ao cliente e o mais importante, a possibilidade de oferecer seus serviços e usar como atrativo sua experiência e qualificação, são itens que, embora pareçam superficiais, são oportunidades que o profissional têm para se destacar em uma área que está cada vez mais difundida no cenário brasileiro<a href=https://g1.globo.com/economia/tecnologia/noticia/tecnologia-no-brasil-volta-crescer-em-2017-e-mantem-pais-entre-os-10-maiores-mercados-do-mundo.ghtml>[1]</a>.
-</p><br>
+    Entregar ao profissional de TI um histórico para controle e realização de estimativas com base nos serviços já prestados, uma descrição mais elaborada do potencial que ele pode oferecer ao cliente e o mais importante, a possibilidade de oferecer seus serviços e usar como atrativo sua experiência e qualificação, são itens que, embora pareçam superficiais, são oportunidades que o profissional têm para se destacar em uma área que está cada vez mais difundida no cenário brasileiro<a href=https://g1.globo.com/economia/tecnologia/noticia/tecnologia-no-brasil-volta-crescer-em-2017-e-mantem-pais-entre-os-10-maiores-mercados-do-mundo.ghtml>[1]</a>.</p>
 
 ### 3. MINI-MUNDO<br>
 
@@ -40,8 +39,7 @@ O profissional, pessoa que presta um serviço, é peça central no sistema, ele 
 
 A fim de assegurar a contratação do serviço, seria ideal um campo para inserir um texto que representa uma espécie de contrato ou termo de compromisso, onde haveria a descrição do acordo, a data em que foi elaborado, a data da última modificação, quando o serviço se iniciará e a previsão de seu término. O conteúdo do contrato deve estar livre para ser um acordo direto entre o contratado e contratante do serviço.<br>
 
-O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder avaliar com uma nota (de 1 a 5) e comentários, os serviços contratados após a conclusão de sua prestação. Futuramente, para recompensar bons profissionais e exibir suas qualidades para os potenciais clientes seria bem-vindo premiações como medalhas virtuais por número de trabalhos atendidos, anos de experiência no sistema, bom atendimento, entre outras.
-</p><br>
+O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder avaliar com uma nota (de 1 a 5) e comentários, os serviços contratados após a conclusão de sua prestação. Futuramente, para recompensar bons profissionais e exibir suas qualidades para os potenciais clientes seria bem-vindo premiações como medalhas virtuais por número de trabalhos atendidos, anos de experiência no sistema, bom atendimento, entre outras.</p>
 
 ### 4. RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 
@@ -147,9 +145,11 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 
 ### 7. MODELO FÍSICO<br>
+[modelo_fisico.sql](https://github.com/duraes-antonio/ResolveAE/blob/master/Persistencia/modelo_fisico.sql)<br><br>
 
 
 ### 8. INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
+[create_inserts_gdrive](https://drive.google.com/drive/folders/17Gi8Pp6xM6RrA27v1vTY3Mn4XIBTcFa7)<br>
 
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
@@ -272,19 +272,19 @@ Machine learning in Python with scikit-learn: https://www.youtube.com/playlist?l
 ## Data de Entrega: (06/12/2018)
 
 
-### 10. ATUALIZAÇÃO DA DOCUMENTAÇÃO/ SLIDES E ENTREGA FINAL<br>
+### 10. ATUALIZAÇÃO DA DOCUMENTAÇÃO/ SLIDES E ENTREGA FINAL<br><br>
 
 ### 11. REFERÊNCIAS
  1. G1. "Tecnologia no Brasil volta crescer em 2017 e mantém país entre os 10 maiores mercados do mundo". Acesso em 16/09/2018. Disponível em: https://g1.globo.com/economia/tecnologia/noticia/tecnologia-no-brasil-volta-crescer-em-2017-e-mantem-pais-entre-os-10-maiores-mercados-do-mundo.ghtml<br>
- 2. PostgreSQL. "CREATE TABLE". Acesso em 05/10/2018. Disponível em: https://www.postgresql.org/docs/9.1/static/sql-createtable.html
+ 2. PostgreSQL. "CREATE TABLE". Acesso em 05/10/2018. Disponível em: https://www.postgresql.org/docs/9.1/static/sql-createtable.html<br><br>
 
 ### 12. FORMATACAO NO GIT
 ["Basic writing and formatting syntax"](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-    
+
 ["About Formatting"](https://help.github.com/articles/about-writing-and-formatting-on-github/)
-    
+
 ["Basic Formatting in Git"](https://help.github.com/articles/basic-writing-and-formatting-syntax/#referencing-issues-and-pull-requests)
-    
+
 ["Working with advanced formatting"](https://help.github.com/articles/working-with-advanced-formatting/)
 
 ["Mastering Markdown"](https://guides.github.com/features/mastering-markdown/)
