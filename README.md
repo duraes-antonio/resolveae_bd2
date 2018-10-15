@@ -2,21 +2,18 @@
 
 Repositório com foco na disciplina de Banco de Dados 2 (referente ao trabalho integrado do 5º período - BSI - IFES).
 
-O referido projeto poderá ser:
-<ol type="A" style="font-size:10px;">
-<li>Um novo sistema/projeto</li>
-<li>Uma expansão de sistema/projeto previamente desenvolvido em disciplinas anteriores (ex: Expansão dos módulos do sistema desenvolvidos em BD1 - incremento mínimo de 50% nos requisitos/complexidade)</li>
-<li>Nas avaliações parciais do professor, o grupo deverá anotar todas as observaçoes que forem feitas pelo professor e pelo proprio grupo, enviar uma cópia das atividades por e-mail para o grupo e postar imediatamente estas observaçõe como tarefas a serem realizadas como tarefas por meio do gerenciador de projetos do git.</li>
-<li>Todas as tarefas devem ser realizadas e deve-se atentar para distribuição igualitária de atividades levando-se em consideração o peso destas.</li>
-<li>Os tópicos numerados para cada atividade no devem ser removidos do trabalho. Entretanto, os conteúdos de exemplo em cada tópico devem ser substituídos pelo conteúdo do trabalho em desenvolvimento.</li>
-<li>sprints de entrega serão quinzenais ou mensais definidos em aula juntamente com o professor</li>
-</ol>
-
-
-OBS Importantes: 
-###### a) Os projetos/sistemas propostos serão validados pelo professor e pela turma
-###### b) Se possível é interessante que os novos sistemas estejam correlacionados com alguma área previamente estudada pelo aluno
-###### c) Caso dependa de alguma instituição/parceiro externo, a base de dados e informações pertinentes a esta devem ser obtidas no prazo de até 15 dias apos aprovação da proposta do trabalho (caso contrário, nova proposta deverá ser apresentada a turma implicando logicamente em um prazo mais curto para realização das atividades e conclusão do trabalho)
+> O referido projeto poderá ser:
+> 1. Um novo sistema/projeto<br>
+> 2. Uma expansão de sistema/projeto previamente desenvolvido em disciplinas anteriores (ex: Expansão dos módulos do sistema desenvolvidos em BD1 - incremento mínimo de 50% nos requisitos/complexidade)<br>
+> 3. Nas avaliações parciais do professor, o grupo deverá anotar todas as observaçoes que forem feitas pelo professor e pelo proprio grupo, enviar uma cópia das atividades por e-mail para o grupo e postar imediatamente estas observaçõe como tarefas a serem realizadas como tarefas por meio do gerenciador de projetos do git.<br>
+> 4. Todas as tarefas devem ser realizadas e deve-se atentar para distribuição igualitária de atividades levando-se em consideração o peso destas.<br>
+> 5. Os tópicos numerados para cada atividade no devem ser removidos do trabalho. Entretanto, os conteúdos de exemplo em cada tópico devem ser substituídos pelo conteúdo do trabalho em desenvolvimento.<br>
+> 6. Sprints de entrega serão quinzenais ou mensais definidos em aula juntamente com o professor<br>
+>
+> <br>OBS Importantes:
+> 1. Os projetos/sistemas propostos serão validados pelo professor e pela turma<br>
+> 2. Se possível é interessante que os novos sistemas estejam correlacionados com alguma área previamente estudada pelo aluno<br>
+> 3. Caso dependa de alguma instituição/parceiro externo, a base de dados e informações pertinentes a esta devem ser obtidas no prazo de até 15 dias apos aprovação da proposta do trabalho (caso contrário, nova proposta deverá ser apresentada a turma implicando logicamente em um prazo mais curto para realização das atividades e conclusão do trabalho)<br>
 
 # Sumário<br>
 
@@ -48,7 +45,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 ### 4. RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 
-[Mockups](https://github.com/duraes-antonio/resolveae_bd2/blob/master/Documentacao/Mockups/resolveAE.pdf)
+[Mockups](https://github.com/duraes-antonio/resolveae_bd2/blob/master/Documentacao/Mockups/resolveAE.pdf)<br><br>
 
 
 ### 5. MODELAGEM<br>
@@ -58,7 +55,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 <p align="center">
     <img src="https://github.com/duraes-antonio/ResolveAE/blob/master/Documentacao/Diagramas/Imagens/modelo_er_conceitual.png"></p><br>
     <a href="https://github.com/duraes-antonio/ResolveAE/blob/master/Documentacao/Diagramas/Arquivos/modelo_er_conceitual.brM3">Download brmodelo(.brM3)</a><br>
-    
+
 #### 5.2 NOTACAO UML (Caso esteja fazendo a disciplina de Projeto)
 
 <p align="center"><img src="https://github.com/duraes-antonio/ResolveAE/blob/master/Documentacao/Diagramas/Imagens/diag_classe.svg"></p><br>
@@ -67,19 +64,80 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 (Apresentação para o professor em sala de aula)
 
 #### 5.3 DECISÕES DE PROJETO
-    [atributo]: [descrição da decisão]
-    
-    EXEMPLO:
-    a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
-    pode possuir para cada departamento mais de uma localização... 
-    b) justifique!
+> [atributo]: [descrição da decisão]<br><br>
+> EXEMPLO:<br>
+> a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa pode possuir para cada departamento mais de uma localização...<br>
+> b) justifique!
+
+* OBS. 1: O modelo foi projetado com o objetivo de priorizar a economia de espaço e normalização de dados.
+* OBS. 2: Tanto cliente quanto prestador de serviço foram modelados em tabela única ('usuario'), como o cliente não precisa dispor dos mesmos dados do prestador, para evitar campos nulos, campos nuláveis originaram tabelas adicionais.<br>
+
+1. TAB 'bairro', 'cidade', 'estado': Optou-se por criar uma tabela para cada um desses dados, tendo em vista a redundância que teriam nos registros da tabela 'endereco'.
+2. Campo 'sigla' (TAB 'estado'): Na tabela 'estado', o campo sigla se faz presente para agilizar comparações e buscas por estado, enquanto que o campo 'nome' serve para exibir o nome por extenso.
+3. TAB 'contato': Originou uma tabela, pois geraria redundância, uma vez que um usuário pode ter várias formas de contato.
+4. TAB 'tipo_contato': Originou uma tabela para fins de normalização(economia de espaço).
+5. TAB 'comentario': Ligado à 'avaliacao', deu origem a uma tabela, pois pode ser nulo, o que consumiria espaço em vão.
+6. TAB 'avaliacao': Tabela separada de 'usuario', pois a avaliação é opcional, o que geraria valores nulos.
+7. TAB 'tipo_info_profissional': Originou uma tabela com a finalidade de evitar redundância, já que várias informações profissionais podem se enquadrar em um mesmo tipo (graduação ou curso técnico, por exemplo).
+8. TAB 'dia_semana': Tendo em vista que cada prestador de serviço pode dispor de N horários, e cada horário liga-se a um dia da semana, optou-se por separar os dias em uma tabela.
+9. TAB 'tipo_servico': Como N serviços podem se enquadrar em uma mesma categoria ("Manutenção e Suporte", por exemplo), optou-se por criar uma tabela para armazenar tais tipos.
+10. Campo 'horas_contratadas' (TAB 'contrato'): Para mensurar a duração de um serviço/projeto, o grupo aderiu à sugestão do professor de usar horas como métrica, pois é mais precisa que dias e mais adequada no cenário trabalhista.
+
 
 #### 5.4 DESCRIÇÃO DOS DADOS 
-    [objeto]: [descrição do objeto]
-    
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+> [objeto]: [descrição do objeto]<br><br>
+> EXEMPLO:<br>
+> CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
+> CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+
+1. USUARIO: Tabela principal, armazena os dados pessoais tanto do cliente quanto do prestador de serviços.<br>
+	1. email: Email do usuário, também usado p/ acessar o sistema (login).
+	2. nome: Nome completo do usuário, exibido no sistema.
+	3. senha: Senha utilizada pelo usuário para acessar o sistema.
+	4. sobre: Campo texto, livre para o usuário preencher com uma descrição sobre si.<br><br>
+2. ENDEREÇO: Tabela responsável por armazenar dados da localização de cada usuário.
+	1. cep: Campo inteiro que representa o código de endereçamento postal.<br><br>
+3. BAIRRO: Tabela que armazena os nomes dos bairros e a qual cidade está ligado.
+	1. nome: Campo texto com o nome do bairro.<br><br>
+4. CIDADE: Tabela que armazena os nomes das cidades e a qual estado está relacionada.
+	1. nome: Campo texto com nome de cada cidade.<br><br>
+5. ESTADO: Tabela responsável por armazenar dados sobre as unidades federativas do Brasil.
+	1. nome: Campo texto com nome (completo) do estado, acentuado e sem abreviações.
+	2. sigla: Campo texto com 2 caracteres representando a sigla de cada UF.<br><br>
+6. CONTATO: Tabela que armazena informações de contato do usuário.
+	1. descricao: Campo texto com o conteúdo(link, nome de usuário ou número de telefone, p.e.) do contato.<br><br>
+7. TIPO_CONTATO: Tabela que armazena os tipos de meio de contato usado pelo usuário.
+	1. nome: Campo texto com o tipo (Facebook, Lattes, Whatsapp, Telefone, Celular, Twitter, ...) do contato.<br><br>
+8. INFO_PROFISSIONAL: Tabela que armazena dados profissionais sobre o usuário.
+	1. descricao: Campo texto com breve descrição sobre a experiência que o indivíduo teve.
+	2. data_inicio: Data aproximada em que o indivíduo iniciou a experiência profissional ou formação.
+	3. data_fim: Data aproximada em que o indivíduo concluiu a experiência profissional ou formação.<br><br>
+9. TIPO_INFO_PROFISSIONAL: Tabela que armazena os tipos de informações profissionais.
+	1. nome: Campo texto com o tipo (Domínio tecnológico, curso técnico, graduação, trabalho, ...) da informação.<br><br>
+10. HORARIO_PRESTACAO: Tabela com os horários livres e ocupados do prestador de serviços.
+	1. inicio: Campo tempo que representa o horário que o prestador começou ou pode começar uma atividade.
+	2. fim: Campo tempo que representa o horário que o prestador finalizou ou poderá concluir uma atividade.
+	3. disponivel: Campo lógico, indica se o intervalo do horário encontra-se disponível ou ocupado.<br><br>
+11. DIA_SEMANA: Tabela que armazena os nomes dos dias da semana.
+	1. nome: Campo textual que armazena o nome de cada dia (Domingo, Segunda-feira, Terça-feira, ...).
+12. CONTRATO: Tabela responsável por armazenar o que e quando algo foi acordado entre prestador e cliente.
+	1. data_inicio: Data (dia/mês/ano) que marca o início da prestação de serviço.
+	2. data_fim: Data (dia/mês/ano) que marca o fim da prestação de serviço.
+	3. data_ult_modif: Data e horário da modificação mais recente no termo/contrato.
+	4. descricao: Campo que representa textualmente as características e peculiaridades do serviço que será contratado.
+	5. horas_contratadas: Campo inteiro que indica o número de horas que o profissional foi contratado pelo cliente.<br><br>
+13. SERVICO: Tabela que armazena informações sobre o serviço prestado pelo profissional.
+	1. valor: Campo numérico real que representa o preço cobrado para realização do serviço.
+	2. titulo: Campo textual que representa um breve título sobre o serviço.<br><br>
+14. TIPO_SERVICO: Tabela que armazena a categoria do serviço prestado.
+	1. nome: Campo texto que representa a área (Banco de dados, Design, Desenvolvimento, ...) do serviço.<br><br>
+15. SUBTIPO_SERVICO: Tabela que armazena as subcategorias do serviço prestado.
+	1. nome: Campo texto que simboliza o subtipo (Adm. de Banco de Dados, Análise de B.I., Ciência de Dados, ...).<br><br>[Subcategorias de Banco de Dados] do serviço.<br><br>
+16. SERVICO_SUBTIPO_SERVICO: Tabela que interliga a tabela 'servico' com a tabela 'subtipo_servico'.<br><br>
+17. AVALIACAO: Tabela que armazena dados sobre cada avaliação feita por um cliente sobre um serviço já contratado.
+	1. nota: Campo inteiro que representa o quão satisfeito o cliente ficou com o serviço, varia de 1 a 5.<br><br>
+18. COMENTARIO: Tabela que armazena os comentários de clientes sobre serviços já contratados.
+	1. comentario: Campo textual que contém a opinião do cliente sobre o serviço contratado<br><br>
 
 ### 6. MODELO LÓGICO<br>
 
@@ -87,8 +145,12 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
     <img src="https://github.com/duraes-antonio/ResolveAE/blob/master/Documentacao/Diagramas/Imagens/modelo_er_logico.png"></p><br>
     <a href="https://github.com/duraes-antonio/ResolveAE/blob/master/Documentacao/Diagramas/Arquivos/modelo_er_logico.brM3">Download brmodelo(.brM3)</a><br>
 
+
 ### 7. MODELO FÍSICO<br>
+
+
 ### 8. INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
+
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
         Referenciar todas as fontes referentes a:
@@ -211,22 +273,21 @@ Machine learning in Python with scikit-learn: https://www.youtube.com/playlist?l
 
 
 ### 10. ATUALIZAÇÃO DA DOCUMENTAÇÃO/ SLIDES E ENTREGA FINAL<br>
-       
-### 11. FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
-<comentario no git>
+
+### 11. REFERÊNCIAS
+ 1. G1. "Tecnologia no Brasil volta crescer em 2017 e mantém país entre os 10 maiores mercados do mundo". Acesso em 16/09/2018. Disponível em: https://g1.globo.com/economia/tecnologia/noticia/tecnologia-no-brasil-volta-crescer-em-2017-e-mantem-pais-entre-os-10-maiores-mercados-do-mundo.ghtml<br>
+ 2. PostgreSQL. "CREATE TABLE". Acesso em 05/10/2018. Disponível em: https://www.postgresql.org/docs/9.1/static/sql-createtable.html
+
+### 12. FORMATACAO NO GIT
+["Basic writing and formatting syntax"](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
     
-##### About Formatting
-    https://help.github.com/articles/about-writing-and-formatting-on-github/
+["About Formatting"](https://help.github.com/articles/about-writing-and-formatting-on-github/)
     
-##### Basic Formatting in Git
+["Basic Formatting in Git"](https://help.github.com/articles/basic-writing-and-formatting-syntax/#referencing-issues-and-pull-requests)
     
-    https://help.github.com/articles/basic-writing-and-formatting-syntax/#referencing-issues-and-pull-requests
-    
-    
-##### Working with advanced formatting
-    https://help.github.com/articles/working-with-advanced-formatting/
-#### Mastering Markdown
-    https://guides.github.com/features/mastering-markdown/
+["Working with advanced formatting"](https://help.github.com/articles/working-with-advanced-formatting/)
+
+["Mastering Markdown"](https://guides.github.com/features/mastering-markdown/)
 
 ### OBSERVAÇÕES IMPORTANTES
 
