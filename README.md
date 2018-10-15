@@ -1,5 +1,6 @@
-# TRABALHO 01 : Título do trabalho
-Trabalho desenvolvido durante a disciplina de BD
+# ResolveAE<br>
+
+Repositório com foco na disciplina de Banco de Dados 2 (referente ao trabalho integrado do 5º período - BSI - IFES).
 
     O referido projeto poderá ser:
         a) Um novo sistema/projeto 
@@ -24,26 +25,35 @@ Trabalho desenvolvido durante a disciplina de BD
         (caso contrário, nova proposta deverá ser apresentada a turma implicando logicamente em um prazo 
         mais curto para realização das atividades e conclusão do trabalho)
     
-DICA: 
-    O kickstart normalmente lança inovaçôes em termos de Sofwares e Apps, portanto pode ser interessante 
-    olhar os lançamentos recentes para incrementar as possibilidades e aguçar a criatividade, o que pode 
-    auxiliar o grupo com novas ideias na solução proposta. Acesse os links abaixo do para explorar sobre apps e softwares no Kickstarter.
-    <br>
-    https://www.kickstarter.com/discover/categories/technology/software
-    <br>
-    https://www.kickstarter.com/discover/categories/technology/apps
-# Sumário
+# Sumário<br>
 
-### 1	COMPONENTES<br>
-Integrantes do grupo<br>
+### 1. COMPONENTES<br>
+* Antônio Carlos D.:  [duraes-antonio](https://github.com/duraes-antonio)<br>
+* Elimar Macena:      [elimarmacena](https://github.com/elimarmacena)<br>
 
-### 2	INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação do projeto do banco de dados <nome do projeto> e motivação da escolha realizada. <br>
-      
-### 3	MINI-MUNDO<br>
-Descrever o mini-mundo. Não deve ser maior do que 30 linhas <br>
+### 2. INTRODUÇÃO E MOTIVAÇAO<br>
 
-### 4	RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
+<p align="justify">
+    Tão cansativa quanto ouvir um "meu sobrinho faz de graça" ou "o seu Zé Marosvaldo faz pela metade do preço", é a atividade de buscar por pessoas qualificadas e/ou com experiência na área.<br><br>
+    Desta forma, a presença de uma plataforma que disponibilize informações sobre a formação e experiência do profissional e detalhes sobre o serviço prestado por ele, não só pode oferecer uma diversidade de especialistas e fomentar a competividade mas também a oferta de emprego e valorização do mercado de TI no Brasil.<br><br>
+    Entregar ao profissional de TI um histórico para controle e realização de estimativas com base nos serviços já prestados, uma descrição mais elaborada do potencial que ele pode oferecer ao cliente e o mais importante, a possibilidade de oferecer seus serviços e usar como atrativo sua experiência e qualificação, são itens que, embora pareçam superficiais, são oportunidades que o profissional têm para se destacar em uma área que está cada vez mais difundida no cenário brasileiro<a href=https://g1.globo.com/economia/tecnologia/noticia/tecnologia-no-brasil-volta-crescer-em-2017-e-mantem-pais-entre-os-10-maiores-mercados-do-mundo.ghtml>[1]</a>.
+</p><br>
+
+### 3. MINI-MUNDO<br>
+
+<p align="justify">
+Para facilitar a busca dos profissionais de TI por pessoas físicas, seria interessante ter um sistema que dispõe informações sobre a formação da pessoa prestadora de serviço, como cursos feitos e experiência em trabalhos passados; informações pessoais como nome, endereço (bairro, cidade, estado), além de meios de contato como telefone (fixo ou móvel) e redes sociais (Facebook, Instagram, LinkedIn, …).<br>
+    
+É bastante importante ter informações sobre o quadro de horários do profissional, pois sabendo qual dia da semana e intervalo de horário estará livre, é possível encontrar um horário que não prejudique ou tenha impacto reduzido sob a rotina do cliente.<br>
+
+O profissional, pessoa que presta um serviço, é peça central no sistema, ele deve ser responsável por descrever o serviço oferecido, para isso, deve informar um título que resuma sua atividade, uma descrição mais alongada, uma faixa de valor que está disposto a receber, a área (Manutenção, Desenvolvimento, Design, Infraestrutura, etc) que melhor descreve o tipo de serviço, e uma sub-área (Desenvolvimento mobile, formatação de computadores, etc).<br>
+
+A fim de assegurar a contratação do serviço, seria ideal um campo para inserir um texto que representa uma espécie de contrato ou termo de compromisso, onde haveria a descrição do acordo, a data em que foi elaborado, a data da última modificação, quando o serviço se iniciará e a previsão de seu término. O conteúdo do contrato deve estar livre para ser um acordo direto entre o contratado e contratante do serviço.<br>
+
+O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder avaliar com uma nota (de 1 a 5) e comentários, os serviços contratados após a conclusão de sua prestação. Futuramente, para recompensar bons profissionais e exibir suas qualidades para os potenciais clientes seria bem-vindo premiações como medalhas virtuais por número de trabalhos atendidos, anos de experiência no sistema, bom atendimento, entre outras.
+</p><br>
+
+### 4. RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
 
 Sugestão: https://balsamiq.com/products/mockups/<br>
@@ -51,11 +61,13 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
 ![Alt text](https://github.com/discipbd2/topicos-trabalho/blob/master/balsamiq.png?raw=true "Title")
 
 
-### 5	MODELO CONCEITUAL<br>
+### 5. MODELO CONCEITUAL<br>
+
 #### 5.1 NOTACAO ENTIDADE RELACIONAMENTO
 ![Alt text](https://github.com/discipbd2/topicos-trabalho/blob/master/sample_MC.png?raw=true "Modelo Conceitual")
     
-     5.2 NOTACAO UML (Caso esteja fazendo a disciplina de Projeto)
+#### 5.2 NOTACAO UML (Caso esteja fazendo a disciplina de Projeto)
+
 ## Data de Entrega: (23/08/2018) 
 (Apresentação para o professor em sala de aula)
 
@@ -74,9 +86,9 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
     CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 
-### 6	MODELO LÓGICO<br>
-### 7	MODELO FÍSICO<br>
-### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
+### 6. MODELO LÓGICO<br>
+### 7. MODELO FÍSICO<br>
+### 8. INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
         Referenciar todas as fontes referentes a:
@@ -89,19 +101,19 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
         b) inclusão das instruções de inserção dos dados nas referidas tabelas
         c) inclusão das instruções para execução de outros procedimentos necessários
 
-### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-#### 9.1	GERACAO DE DADOS (MÍNIMO DE 10 REGISTROS PARA CADA TABELA NO BANCO DE DADOS)<br>
+### 9. TABELAS E PRINCIPAIS CONSULTAS<br>
+#### 9.1 GERACAO DE DADOS (MÍNIMO DE 10 REGISTROS PARA CADA TABELA NO BANCO DE DADOS)<br>
 
 ## Data de Entrega: (06/09/2018)
 
 <br>
 OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 
-#### 9.2	SELECT DAS TABELAS COM PRIMEIROS 10 REGISTROS INSERIDOS <br> 
+#### 9.2 SELECT DAS TABELAS COM PRIMEIROS 10 REGISTROS INSERIDOS <br> 
     
 <br>
 
-#### 9.3	SELECT DAS VISÕES COM PRIMEIROS 10 REGISTROS DA VIEW <br>
+#### 9.3 SELECT DAS VISÕES COM PRIMEIROS 10 REGISTROS DA VIEW <br>
         a) Descrição da view sobre que grupos de usuários (operacional/estratégico) <br>
         e necessidade ela contempla.
         b) Descrição das permissões de acesso e usuários correlacionados (após definição <br>
@@ -111,7 +123,7 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         presentes aqui. 
 <br>
 
-#### 9.4	LISTA DE CODIGOS DAS FUNÇÕES, ASSERÇOES E TRIGGERS<br>
+#### 9.4 LISTA DE CODIGOS DAS FUNÇÕES, ASSERÇOES E TRIGGERS<br>
         Detalhamento sobre funcionalidade de cada código.
         a) Objetivo
         b) Código do objeto (função/trigger/asserção)
@@ -121,7 +133,7 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
 
 ## Data de Entrega: (27/09/2018)
 
-#### 9.5	Administração do banco de dados<br>
+#### 9.5 Administração do banco de dados<br>
         Descrição detalhada sobre como serão executadas no banco de dados as <br>
         seguintes atividades.
         a) Segurança e autorização de acesso: especificação básica de configurações de acesso remoto
@@ -130,7 +142,7 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         d) Plano com frequencia de análises visando otimização de performance
 <br>
 
-#### 9.6	GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
+#### 9.6 GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
         a) principal tabela do sistema deve ter no mínimo 1,5 milhão de registros
         b) tabelas diretamente relacionadas a tabela principal 100 mil registros
         c) tabelas auxiliares de relacao multivalorada mínimo de 10 registros
@@ -141,7 +153,7 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
         
 ## Data de Entrega: (31/10/2018)
 
-#### 9.7	Backup do Banco de Dados<br>
+#### 9.7 Backup do Banco de Dados<br>
         Detalhamento do backup.
         a) Tempo
         b) Tamanho
@@ -152,7 +164,7 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
 <br>
 
 
-#### 9.8	APLICAÇAO DE ÍNDICES E TESTES DE PERFORMANCE<br>
+#### 9.8 APLICAÇAO DE ÍNDICES E TESTES DE PERFORMANCE<br>
     a) Lista de índices, tipos de índices com explicação de porque foram implementados nas consultas 
     b) Performance esperada VS Resultados obtidos
     c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices (constando velocidade esperada com planejamento, sem indice e com índice Vs velocidade de execucao real com índice e sem índice).
@@ -198,9 +210,9 @@ Machine learning in Python with scikit-learn: https://www.youtube.com/playlist?l
 ## Data de Entrega: (06/12/2018)
 
 
-### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO/ SLIDES E ENTREGA FINAL<br>
+### 10. ATUALIZAÇÃO DA DOCUMENTAÇÃO/ SLIDES E ENTREGA FINAL<br>
        
-### 11  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
+### 11. FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
 <comentario no git>
     
 ##### About Formatting
