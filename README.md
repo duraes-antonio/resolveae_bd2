@@ -24,7 +24,7 @@ Repositório com foco na disciplina de Banco de Dados 2 (referente ao trabalho i
 ### 2. INTRODUÇÃO E MOTIVAÇAO<br>
 
 <p align="justify">
-    Tão cansativa quanto ouvir um "meu sobrinho faz de graça" ou "o seu Zé Marosvaldo faz pela metade do preço", é a atividade de buscar por pessoas qualificadas e/ou com experiência na área.<br><br>
+    Tão cansativa quanto ouvir um "meu sobrinho faz de graça" ou "seu Zé Marosvaldo faz pela metade do preço", é a atividade de buscar por pessoas qualificadas e/ou com experiência na área.<br><br>
     Desta forma, a presença de uma plataforma que disponibilize informações sobre a formação e experiência do profissional e detalhes sobre o serviço prestado por ele, não só pode oferecer uma diversidade de especialistas e fomentar a competividade mas também a oferta de emprego e valorização do mercado de TI no Brasil.<br><br>
     Entregar ao profissional de TI um histórico para controle e realização de estimativas com base nos serviços já prestados, uma descrição mais elaborada do potencial que ele pode oferecer ao cliente e o mais importante, a possibilidade de oferecer seus serviços e usar como atrativo sua experiência e qualificação, são itens que, embora pareçam superficiais, são oportunidades que o profissional têm para se destacar em uma área que está cada vez mais difundida no cenário brasileiro<a href=https://g1.globo.com/economia/tecnologia/noticia/tecnologia-no-brasil-volta-crescer-em-2017-e-mantem-pais-entre-os-10-maiores-mercados-do-mundo.ghtml>[1]</a>.</p>
 
