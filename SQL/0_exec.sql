@@ -1,0 +1,21 @@
+--total de registros 9 046 272 (9M 46k 272)
+drop schema if exists public cascade;
+create schema public;
+\i /home/x/TEMP/usuario.sql
+\i /home/x/TEMP/estado.sql
+\i /home/x/TEMP/cidade.sql
+\i /home/x/TEMP/bairro.sql
+\i /home/x/TEMP/endereco.sql
+\i /home/x/TEMP/tipo_contato.sql
+\i /home/x/TEMP/contato.sql
+\i /home/x/TEMP/tipo_info_profissional.sql
+\i /home/x/TEMP/info_profissional.sql
+\i /home/x/TEMP/contrato.sql
+\i /home/x/TEMP/tipo_servico.sql
+\i /home/x/TEMP/subtipo_servico.sql
+\i /home/x/TEMP/servico.sql
+\i /home/x/TEMP/servico_subtipo_servico.sql
+\i /home/x/TEMP/avaliacao.sql
+\i /home/x/TEMP/comentario.sql
+\i /home/x/TEMP/dia_semana.sql
+\i /home/x/TEMP/horario_prestacao.sql

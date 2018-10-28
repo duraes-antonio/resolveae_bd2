@@ -1,0 +1,14 @@
+CREATE TABLE dia_semana(
+	id SERIAL PRIMARY KEY, 
+	nome VARCHAR (15) UNIQUE
+);
+INSERT INTO dia_semana(nome) VALUES
+	('DOMINGO'),
+	('SEGUNDA-FEIRA'),
+	('TERÇA-FEIRA'),
+	('QUARTA-FEIRA'),
+	('QUINTA-FEIRA'),
+	('SEXTA-FEIRA'),
+	('SÁBADO');
+
+
