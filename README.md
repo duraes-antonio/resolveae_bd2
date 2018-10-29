@@ -70,16 +70,19 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 * OBS. 1: O modelo foi projetado com o objetivo de priorizar a economia de espaço e normalização de dados.
 * OBS. 2: Tanto cliente quanto prestador de serviço foram modelados em tabela única ('usuario'), como o cliente não precisa dispor dos mesmos dados do prestador, para evitar campos nulos, campos nuláveis originaram tabelas adicionais.<br>
 
-1. TAB 'bairro', 'cidade', 'estado': Optou-se por criar uma tabela para cada um desses dados, tendo em vista a redundância que teriam nos registros da tabela 'endereco'.
-2. Campo 'sigla' (TAB 'estado'): Na tabela 'estado', o campo sigla se faz presente para agilizar comparações e buscas por estado, enquanto que o campo 'nome' serve para exibir o nome por extenso.
-3. TAB 'contato': Originou uma tabela, pois geraria redundância, uma vez que um usuário pode ter várias formas de contato.
-4. TAB 'tipo_contato': Originou uma tabela para fins de normalização(economia de espaço).
-5. TAB 'comentario': Ligado à 'avaliacao', deu origem a uma tabela, pois pode ser nulo, o que consumiria espaço em vão.
-6. TAB 'avaliacao': Tabela separada de 'usuario', pois a avaliação é opcional, o que geraria valores nulos.
-7. TAB 'tipo_info_profissional': Originou uma tabela com a finalidade de evitar redundância, já que várias informações profissionais podem se enquadrar em um mesmo tipo (graduação ou curso técnico, por exemplo).
-8. TAB 'dia_semana': Tendo em vista que cada prestador de serviço pode dispor de N horários, e cada horário liga-se a um dia da semana, optou-se por separar os dias em uma tabela.
-9. TAB 'tipo_servico': Como N serviços podem se enquadrar em uma mesma categoria ("Manutenção e Suporte", por exemplo), optou-se por criar uma tabela para armazenar tais tipos.
-10. Campo 'horas_contratadas' (TAB 'contrato'): Para mensurar a duração de um serviço/projeto, o grupo aderiu à sugestão do professor de usar horas como métrica, pois é mais precisa que dias e mais adequada no cenário trabalhista.
+
+| TABELA/ATRIBUTO                | DESCRICAO                                                              |
+| ------------------------------ | ---------------------------------------------------------------------- |
+|TAB 'bairro', 'cidade', 'estado'|Optou-se por criar uma tabela para cada um desses dados, tendo em vista a redundância que teriam nos |registros da tabela 'endereco'.|
+|Campo 'sigla' (TAB 'estado')|Na tabela 'estado', o campo sigla se faz presente para agilizar comparações e buscas por estado, enquanto que o campo 'nome' serve para exibir o nome por extenso.|
+|TAB 'contato'|Originou uma tabela, pois geraria redundância, uma vez que um usuário pode ter várias formas de contato.|
+|TAB 'tipo_contato'|Originou uma tabela para fins de normalização(economia de espaço).|
+|TAB 'comentario'|Ligado à 'avaliacao', deu origem a uma tabela, pois pode ser nulo, o que consumiria espaço em vão.|
+|TAB 'avaliacao'|Tabela separada de 'usuario', pois a avaliação é opcional, o que geraria valores nulos.|
+|TAB 'tipo_info_profissional'|Originou uma tabela com a finalidade de evitar redundância, já que várias informações profissionais podem se enquadrar em um mesmo tipo (graduação ou curso técnico, por exemplo).|
+|TAB 'dia_semana'|Tendo em vista que cada prestador de serviço pode dispor de N horários, e cada horário liga-se a um dia da semana, optou-se por separar os dias em uma tabela.|
+|TAB 'tipo_servico'|Como N serviços podem se enquadrar em uma mesma categoria ("Manutenção e Suporte", por exemplo), optou-se por criar uma tabela para armazenar tais tipos.|
+|Campo 'horas_contratadas' (TAB 'contrato')|Para mensurar a duração de um serviço/projeto, o grupo aderiu à sugestão do professor de usar horas como métrica, pois é mais precisa que dias e mais adequada no cenário trabalhista.|
 
 
 #### 5.4 DESCRIÇÃO DOS DADOS 
@@ -89,53 +92,131 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 > CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
 
 1. USUARIO: Tabela principal, armazena os dados pessoais tanto do cliente quanto do prestador de serviços.<br>
-	1. email: Email do usuário, também usado p/ acessar o sistema (login).
-	2. nome: Nome completo do usuário, exibido no sistema.
-	3. senha: Senha utilizada pelo usuário para acessar o sistema.
-	4. sobre: Campo texto, livre para o usuário preencher com uma descrição sobre si.<br><br>
-2. ENDEREÇO: Tabela responsável por armazenar dados da localização de cada usuário.
-	1. cep: Campo inteiro que representa o código de endereçamento postal.<br><br>
-3. BAIRRO: Tabela que armazena os nomes dos bairros e a qual cidade está ligado.
-	1. nome: Campo texto com o nome do bairro.<br><br>
-4. CIDADE: Tabela que armazena os nomes das cidades e a qual estado está relacionada.
-	1. nome: Campo texto com nome de cada cidade.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|email|Email do usuário, também usado p/ acessar o sistema (login).|
+|nome|Nome completo do usuário, exibido no sistema.|
+|senha|Senha utilizada pelo usuário para acessar o sistema.|
+|sobre|Campo texto, livre para o usuário preencher com uma descrição sobre si.|
+
+2. ENDEREÇO: Tabela responsável por armazenar dados da localização de cada usuário.<br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|cep|Campo inteiro que representa o código de endereçamento postal.|
+
+
+3. BAIRRO: Tabela que armazena os nomes dos bairros e a qual cidade está ligado.<br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|nome|Campo texto com o nome do bairro.|
+
+
+4. CIDADE: Tabela que armazena os nomes das cidades e a qual estado está relacionada.<br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|nome|Campo texto com nome de cada cidade.|
+
+
 5. ESTADO: Tabela responsável por armazenar dados sobre as unidades federativas do Brasil.
-	1. nome: Campo texto com nome (completo) do estado, acentuado e sem abreviações.
-	2. sigla: Campo texto com 2 caracteres representando a sigla de cada UF.<br><br>
-6. CONTATO: Tabela que armazena informações de contato do usuário.
-	1. descricao: Campo texto com o conteúdo(link, nome de usuário ou número de telefone, p.e.) do contato.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|nome|Campo texto com nome (completo) do estado, acentuado e sem abreviações.|
+|sigla|Campo texto com 2 caracteres representando a sigla de cada UF.|
+
+
+6. CONTATO: Tabela que armazena informações de contato do usuário.<br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|descricao|Campo texto com o conteúdo(link, nome de usuário ou número de telefone, p.e.) do contato.|
+
+
 7. TIPO_CONTATO: Tabela que armazena os tipos de meio de contato usado pelo usuário.
-	1. nome: Campo texto com o tipo (Facebook, Lattes, Whatsapp, Telefone, Celular, Twitter, ...) do contato.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|nome|Campo texto com o tipo (Facebook, Lattes, Whatsapp, Telefone, Celular, Twitter, ...) do contato.|
+
+
 8. INFO_PROFISSIONAL: Tabela que armazena dados profissionais sobre o usuário.
-	1. descricao: Campo texto com breve descrição sobre a experiência que o indivíduo teve.
-	2. data_inicio: Data aproximada em que o indivíduo iniciou a experiência profissional ou formação.
-	3. data_fim: Data aproximada em que o indivíduo concluiu a experiência profissional ou formação.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|descricao|Campo texto com breve descrição sobre a experiência que o indivíduo teve.|
+|data_inicio|Data aproximada em que o indivíduo iniciou a experiência profissional ou formação.|
+|data_fim| Data aproximada em que o indivíduo concluiu a experiência profissional ou formação.|
+
+
 9. TIPO_INFO_PROFISSIONAL: Tabela que armazena os tipos de informações profissionais.
-	1. nome: Campo texto com o tipo (Domínio tecnológico, curso técnico, graduação, trabalho, ...) da informação.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|nome|Campo texto com o tipo (Domínio tecnológico, curso técnico, graduação, trabalho, ...) da informação.|
+
+
 10. HORARIO_PRESTACAO: Tabela com os horários livres e ocupados do prestador de serviços.
-	1. inicio: Campo tempo que representa o horário que o prestador começou ou pode começar uma atividade.
-	2. fim: Campo tempo que representa o horário que o prestador finalizou ou poderá concluir uma atividade.
-	3. disponivel: Campo lógico, indica se o intervalo do horário encontra-se disponível ou ocupado.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|inicio|Campo tempo que representa o horário que o prestador começou ou pode começar uma atividade.|
+|fim|Campo tempo que representa o horário que o prestador finalizou ou poderá concluir uma atividade.|
+|disponivel|Campo lógico, indica se o intervalo do horário encontra-se disponível ou ocupado.|
+
+
 11. DIA_SEMANA: Tabela que armazena os nomes dos dias da semana.
-	1. nome: Campo textual que armazena o nome de cada dia (Domingo, Segunda-feira, Terça-feira, ...).
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|nome|Campo textual que armazena o nome de cada dia (Domingo, Segunda-feira, Terça-feira, ...).|
+
+
 12. CONTRATO: Tabela responsável por armazenar o que e quando algo foi acordado entre prestador e cliente.
-	1. data_inicio: Data (dia/mês/ano) que marca o início da prestação de serviço.
-	2. data_fim: Data (dia/mês/ano) que marca o fim da prestação de serviço.
-	3. data_ult_modif: Data e horário da modificação mais recente no termo/contrato.
-	4. descricao: Campo que representa textualmente as características e peculiaridades do serviço que será contratado.
-	5. horas_contratadas: Campo inteiro que indica o número de horas que o profissional foi contratado pelo cliente.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|data_inicio| Data (dia/mês/ano) que marca o início da prestação de serviço.|
+|data_fim| Data (dia/mês/ano) que marca o fim da prestação de serviço.|
+|data_ult_modif| Data e horário da modificação mais recente no termo/contrato.|
+|descricao| Campo que representa textualmente as características e peculiaridades do serviço que será contratado.|
+|horas_contratadas| Campo inteiro que indica o número de horas que o profissional foi contratado pelo cliente.<br><br>|
+
+
 13. SERVICO: Tabela que armazena informações sobre o serviço prestado pelo profissional.
-	1. valor: Campo numérico real que representa o preço cobrado para realização do serviço.
-	2. titulo: Campo textual que representa um breve título sobre o serviço.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|valor| Campo numérico real que representa o preço cobrado para realização do serviço.|
+|titulo| Campo textual que representa um breve título sobre o serviço.|
+
+
 14. TIPO_SERVICO: Tabela que armazena a categoria do serviço prestado.
-	1. nome: Campo texto que representa a área (Banco de dados, Design, Desenvolvimento, ...) do serviço.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|nome| Campo texto que representa a área (Banco de dados, Design, Desenvolvimento, ...) do serviço.|
 15. SUBTIPO_SERVICO: Tabela que armazena as subcategorias do serviço prestado.
-	1. nome: Campo texto que simboliza o subtipo (Adm. de Banco de Dados, Análise de B.I., Ciência de Dados, ...).<br><br>[Subcategorias de Banco de Dados] do serviço.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|nome| Campo texto que simboliza o subtipo (Adm. de Banco de Dados, Análise de B.I., Ciência de Dados, ...).<br><br>[Subcategorias de Banco de Dados] do serviço.|
 16. SERVICO_SUBTIPO_SERVICO: Tabela que interliga a tabela 'servico' com a tabela 'subtipo_servico'.<br><br>
 17. AVALIACAO: Tabela que armazena dados sobre cada avaliação feita por um cliente sobre um serviço já contratado.
-	1. nota: Campo inteiro que representa o quão satisfeito o cliente ficou com o serviço, varia de 1 a 5.<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|nota| Campo inteiro que representa o quão satisfeito o cliente ficou com o serviço, varia de 1 a 5.|
+
+
 18. COMENTARIO: Tabela que armazena os comentários de clientes sobre serviços já contratados.
-	1. comentario: Campo textual que contém a opinião do cliente sobre o serviço contratado<br><br>
+
+| ATRIBUTO           | DESCRICAO                                                            |
+| -------------------| ---------------------------------------------------------------------|
+|comentario|Campo textual que contém a opinião do cliente sobre o serviço contratado.|
 
 ### 6. MODELO LÓGICO<br>
 
