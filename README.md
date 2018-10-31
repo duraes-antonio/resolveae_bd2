@@ -70,7 +70,8 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 * OBS. 1: O modelo foi projetado com o objetivo de priorizar a economia de espaço e normalização de dados.
 * OBS. 2: Tanto cliente quanto prestador de serviço foram modelados em tabela única ('usuario'), como o cliente não precisa dispor dos mesmos dados do prestador, para evitar campos nulos, campos nuláveis originaram tabelas adicionais.<br>
 
-
+<p align="center">
+    
 | TABELA/ATRIBUTO                | DESCRICAO                                                              |
 | ------------------------------ | ---------------------------------------------------------------------- |
 |TAB 'bairro', 'cidade', 'estado'|Optou-se por criar uma tabela para cada um desses dados, tendo em vista a redundância que teriam nos |registros da tabela 'endereco'.|
@@ -84,6 +85,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 |TAB 'tipo_servico'|Como N serviços podem se enquadrar em uma mesma categoria ("Manutenção e Suporte", por exemplo), optou-se por criar uma tabela para armazenar tais tipos.|
 |Campo 'horas_contratadas' (TAB 'contrato')|Para mensurar a duração de um serviço/projeto, o grupo aderiu à sugestão do professor de usar horas como métrica, pois é mais precisa que dias e mais adequada no cenário trabalhista.|
 
+</p>
 
 #### 5.4 DESCRIÇÃO DOS DADOS 
 > [objeto]: [descrição do objeto]<br><br>
@@ -93,6 +95,8 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 1. USUARIO: Tabela principal, armazena os dados pessoais tanto do cliente quanto do prestador de serviços.<br>
 
+<p align="center">
+
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |email|Email do usuário, também usado p/ acessar o sistema (login).|
@@ -100,50 +104,72 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 |senha|Senha utilizada pelo usuário para acessar o sistema.|
 |sobre|Campo texto, livre para o usuário preencher com uma descrição sobre si.|
 
+</p>
+
 2. ENDEREÇO: Tabela responsável por armazenar dados da localização de cada usuário.<br>
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |cep|Campo inteiro que representa o código de endereçamento postal.|
 
+</p>
 
 3. BAIRRO: Tabela que armazena os nomes dos bairros e a qual cidade está ligado.<br>
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |nome|Campo texto com o nome do bairro.|
 
+</p>
 
 4. CIDADE: Tabela que armazena os nomes das cidades e a qual estado está relacionada.<br>
 
+<p align="center">
+    
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |nome|Campo texto com nome de cada cidade.|
 
+</p>
 
 5. ESTADO: Tabela responsável por armazenar dados sobre as unidades federativas do Brasil.
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |nome|Campo texto com nome (completo) do estado, acentuado e sem abreviações.|
 |sigla|Campo texto com 2 caracteres representando a sigla de cada UF.|
 
+</p>
 
 6. CONTATO: Tabela que armazena informações de contato do usuário.<br>
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |descricao|Campo texto com o conteúdo(link, nome de usuário ou número de telefone, p.e.) do contato.|
 
+</p>
 
 7. TIPO_CONTATO: Tabela que armazena os tipos de meio de contato usado pelo usuário.
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |nome|Campo texto com o tipo (Facebook, Lattes, Whatsapp, Telefone, Celular, Twitter, ...) do contato.|
 
+</p>
 
 8. INFO_PROFISSIONAL: Tabela que armazena dados profissionais sobre o usuário.
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
@@ -151,15 +177,21 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 |data_inicio|Data aproximada em que o indivíduo iniciou a experiência profissional ou formação.|
 |data_fim| Data aproximada em que o indivíduo concluiu a experiência profissional ou formação.|
 
+</p>
 
 9. TIPO_INFO_PROFISSIONAL: Tabela que armazena os tipos de informações profissionais.
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |nome|Campo texto com o tipo (Domínio tecnológico, curso técnico, graduação, trabalho, ...) da informação.|
 
+</p>
 
 10. HORARIO_PRESTACAO: Tabela com os horários livres e ocupados do prestador de serviços.
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
@@ -167,15 +199,21 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 |fim|Campo tempo que representa o horário que o prestador finalizou ou poderá concluir uma atividade.|
 |disponivel|Campo lógico, indica se o intervalo do horário encontra-se disponível ou ocupado.|
 
+</p>
 
 11. DIA_SEMANA: Tabela que armazena os nomes dos dias da semana.
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |nome|Campo textual que armazena o nome de cada dia (Domingo, Segunda-feira, Terça-feira, ...).|
 
+</p>
 
 12. CONTRATO: Tabela responsável por armazenar o que e quando algo foi acordado entre prestador e cliente.
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
@@ -185,38 +223,60 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 |descricao| Campo que representa textualmente as características e peculiaridades do serviço que será contratado.|
 |horas_contratadas| Campo inteiro que indica o número de horas que o profissional foi contratado pelo cliente.<br><br>|
 
+</p>
 
 13. SERVICO: Tabela que armazena informações sobre o serviço prestado pelo profissional.
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |valor| Campo numérico real que representa o preço cobrado para realização do serviço.|
 |titulo| Campo textual que representa um breve título sobre o serviço.|
 
+</p>
 
 14. TIPO_SERVICO: Tabela que armazena a categoria do serviço prestado.
+
+<p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |nome| Campo texto que representa a área (Banco de dados, Design, Desenvolvimento, ...) do serviço.|
+
+</p>
+
 15. SUBTIPO_SERVICO: Tabela que armazena as subcategorias do serviço prestado.
 
+<p align="center">
+    
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |nome| Campo texto que simboliza o subtipo (Adm. de Banco de Dados, Análise de B.I., Ciência de Dados, ...).<br><br>[Subcategorias de Banco de Dados] do serviço.|
+
+</p>
+
 16. SERVICO_SUBTIPO_SERVICO: Tabela que interliga a tabela 'servico' com a tabela 'subtipo_servico'.<br><br>
 17. AVALIACAO: Tabela que armazena dados sobre cada avaliação feita por um cliente sobre um serviço já contratado.
 
+<p align="center">
+    
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |nota| Campo inteiro que representa o quão satisfeito o cliente ficou com o serviço, varia de 1 a 5.|
 
+</p>
+
 
 18. COMENTARIO: Tabela que armazena os comentários de clientes sobre serviços já contratados.
 
+<p align="center">
+    
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
 |comentario|Campo textual que contém a opinião do cliente sobre o serviço contratado.|
+
+</p>
 
 ### 6. MODELO LÓGICO<br>
 
@@ -241,6 +301,7 @@ Os inserts podem ser acessados [aqui](https://github.com/duraes-antonio/resolvea
         
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS (ARQUIVO ÚNICO COM):
 Não é possivel gerar um arquivo unico, visto que o GitHub possui limitação de arquivo de 100Mb, porem é possivel acessar todas essas informações [aqui](https://github.com/duraes-antonio/resolveae_bd2/tree/master/SQL).<br>
+
         a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD
         b) inclusão das instruções de inserção dos dados nas referidas tabelas
         c) inclusão das instruções para execução de outros procedimentos necessários
@@ -254,10 +315,158 @@ Não é possivel gerar um arquivo unico, visto que o GitHub possui limitação d
 OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 
 #### 9.2 SELECT DAS TABELAS COM PRIMEIROS 10 REGISTROS INSERIDOS <br> 
-    
+```shell
+SELECT * FROM AVALIACAO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_avaliacao.PNG">
+<br>
+
+```shell
+SELECT * FROM BAIRRO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_bairro.PNG">
+<br>
+
+```shell
+SELECT * FROM CIDADE LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_cidade.PNG">
+<br>
+
+```shell
+SELECT * FROM COMENTARIO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_comentario.PNG">
+<br>
+
+```shell
+SELECT * FROM CONTATO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_contato.PNG">
+<br>
+
+```shell
+SELECT * FROM CONTRATO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_contrato.PNG">
+<br>
+
+```shell
+SELECT * FROM DIA_SEMANA LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_diasemana.PNG">
+<br>
+
+```shell
+SELECT * FROM ENDERECO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_endereco.PNG">
+<br>
+
+```shell
+SELECT * FROM ESTADO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_estado.PNG">
+<br>
+
+```shell
+SELECT * FROM HORARIO_PRESTACAO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_horarioprestacao.PNG">
+<br>
+
+```shell
+SELECT * FROM INFO_PROFISSIONAL LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_infoprofissional.PNG">
+<br>
+
+```shell
+SELECT * FROM SERVICO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_servico.PNG">
+<br>
+
+```shell
+SELECT * FROM SERVICO_SUBTIPO_SERVICO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_servicosubtiposervico.PNG">
+<br>
+
+```shell
+SELECT * FROM SUBTIPO_SERVICO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_subtiposervico.PNG">
+<br>
+
+```shell
+SELECT * FROM TIPO_CONTATO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_tipocontato.PNG">
+<br>
+
+```shell
+SELECT * FROM TIPO_INFO_PROFISSIONAL LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_tipoinfoprofissional.PNG">
+<br>
+
+```shell
+SELECT * FROM TIPO_SERVICO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_tiposervico.PNG">
+<br>
+
+```shell
+SELECT * FROM USUARIO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_usuario.PNG">
 <br>
 
 #### 9.3 SELECT DAS VISÕES COM PRIMEIROS 10 REGISTROS DA VIEW <br>
+
+As <i>views</i> geradas foram todas pensadas na questao de agiliade ao montar uma <i>query</i> para exibir certos dados para o usuario, visto que o banco possui uma grande normalização.<br><br>
+De modo geral estas <i>views</i> representam consultas basicas utilizadas pelos usuarios do sistema ao fazer uma pesquisa de um item, e para agiliar este processo foram pensadas essas <i>views</i>.<br>
+
+```shell
+SELECT * FROM VIEW_AVALIACOES_SERVICO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_avaliacaoservico.PNG">
+
+<i>View</i> com foco na praticidade de se buscar informação de um serviço que esta sendo contratado pelo usuario, visto que a mesma traz uma avaliacao(nota) e o seu devido comentario, caso exista.<br><br>
+
+```shell
+SELECT * FROM VIEW_DADOS_CONTRATO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_dadoscontrato.PNG">
+
+<i>View</i> que visa facilitar o acesso a informações de um contrato.<br><br>
+
+```shell
+SELECT * FROM VIEW_ENDERECO_USUARIO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_enderecousuario.PNG">
+
+Por nosso banco normalizar o endereco essa <i>view</i> tem como foco a facilidade de resgatar o endereço de determinado usuario.<br>
+
+```shell
+SELECT * FROM VIEW_INFO_PROFISSIONAL_USUARIO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_infoprofissionalusuario.PNG">
+
+Em informação profissional existem diversas categorias de informação, visando facilitar o entedimento do usario foi criada esta <i>view</i> que já faz a relação do tipo com a informação cadastrada.<br><br>
+
+```shell
+SELECT * FROM VIEW_SUBTIPO_SERVICO LIMIT 10
+```
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_subtiposervico.PNG">
+
+Em nosso banco um usuario tem a possibilidade de cadastrar subtipos de serviço, porem este subtipo deve estra atrelado a um tipo, tendo esta relação o subtipo serviço guarda um id, o que nao é legivel para o usuario, para trazer a informaão com mais foco de mundo real foi criada esta <i>view</i>.<br><br>
+
+
+
+
+
         a) Descrição da view sobre que grupos de usuários (operacional/estratégico) <br>
         e necessidade ela contempla.
         b) Descrição das permissões de acesso e usuários correlacionados (após definição <br>
