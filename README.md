@@ -230,7 +230,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 
 ### 8. INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
-[create_inserts_gdrive](https://drive.google.com/drive/folders/17Gi8Pp6xM6RrA27v1vTY3Mn4XIBTcFa7)<br>
+Os inserts podem ser acessados [aqui](https://github.com/duraes-antonio/resolveae_bd2/tree/master/SQL).
 
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
@@ -240,6 +240,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
         c) fontes de estudo para desenvolvimento do projeto
         
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS (ARQUIVO ÚNICO COM):
+Não é possivel gerar um arquivo unico, visto que o GitHub possui limitação de arquivo de 100Mb, porem é possivel acessar todas essas informações [aqui](https://github.com/duraes-antonio/resolveae_bd2/tree/master/SQL).<br>
         a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD
         b) inclusão das instruções de inserção dos dados nas referidas tabelas
         c) inclusão das instruções para execução de outros procedimentos necessários
