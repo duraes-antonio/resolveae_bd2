@@ -318,110 +318,128 @@ OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da 
 ```shell
 SELECT * FROM AVALIACAO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_avaliacao.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM BAIRRO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_bairro.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM CIDADE LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_cidade.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM COMENTARIO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_comentario.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM CONTATO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_contato.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM CONTRATO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_contrato.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM DIA_SEMANA LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_diasemana.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM ENDERECO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_endereco.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM ESTADO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_estado.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM HORARIO_PRESTACAO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_horarioprestacao.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM INFO_PROFISSIONAL LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_infoprofissional.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM SERVICO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_servico.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM SERVICO_SUBTIPO_SERVICO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_servicosubtiposervico.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM SUBTIPO_SERVICO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_subtiposervico.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM TIPO_CONTATO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_tipocontato.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM TIPO_INFO_PROFISSIONAL LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_tipoinfoprofissional.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM TIPO_SERVICO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_tiposervico.PNG">
-<br>
+<br></p>
 
 ```shell
 SELECT * FROM USUARIO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_usuario.PNG">
-<br>
+<br></p>
 
 #### 9.3 SELECT DAS VISÕES COM PRIMEIROS 10 REGISTROS DA VIEW <br>
 
@@ -431,35 +449,41 @@ De modo geral estas <i>views</i> representam consultas basicas utilizadas pelos 
 ```shell
 SELECT * FROM VIEW_AVALIACOES_SERVICO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_avaliacaoservico.PNG">
+<br></p>
 
 <i>View</i> com foco na praticidade de se buscar informação de um serviço que esta sendo contratado pelo usuario, visto que a mesma traz uma avaliacao(nota) e o seu devido comentario, caso exista.<br><br>
 
 ```shell
 SELECT * FROM VIEW_DADOS_CONTRATO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_dadoscontrato.PNG">
-
+</p>
 <i>View</i> que visa facilitar o acesso a informações de um contrato.<br><br>
 
 ```shell
 SELECT * FROM VIEW_ENDERECO_USUARIO LIMIT 10
 ```
+<p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_enderecousuario.PNG">
-
+</p>
 Por nosso banco normalizar o endereco essa <i>view</i> tem como foco a facilidade de resgatar o endereço de determinado usuario.<br>
 
 ```shell
 SELECT * FROM VIEW_INFO_PROFISSIONAL_USUARIO LIMIT 10
 ```
-<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_infoprofissionalusuario.PNG">
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_infoprofissionalusuario.PNG"></p>
 
 Em informação profissional existem diversas categorias de informação, visando facilitar o entedimento do usario foi criada esta <i>view</i> que já faz a relação do tipo com a informação cadastrada.<br><br>
 
 ```shell
 SELECT * FROM VIEW_SUBTIPO_SERVICO LIMIT 10
 ```
-<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_subtiposervico.PNG">
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_subtiposervico.PNG"></p>
 
 Em nosso banco um usuario tem a possibilidade de cadastrar subtipos de serviço, porem este subtipo deve estra atrelado a um tipo, tendo esta relação o subtipo serviço guarda um id, o que nao é legivel para o usuario, para trazer a informaão com mais foco de mundo real foi criada esta <i>view</i>.<br><br>
 
