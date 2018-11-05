@@ -507,8 +507,8 @@ Em nosso banco um usuario tem a possibilidade de cadastrar subtipos de serviço,
 ```shell
 SELECT GET_MEDIA_USUARIO(5)
 ```
-
-<img>
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/MEDIA_USUARIO.PNG"> </p>
 <br>
 
 * [MEDIA VALOR HORA](https://github.com/duraes-antonio/resolveae_bd2/blob/master/FUNCTIONS/GET_MEDIA_VALOR_HORA.sql): Função que retorna o valor médio da hora de um prestador informado (utiliza o ID do usuário), como na função anterior, esta é utilizada no intuito de uma exibição prévia de um perfil de prestador, informando o valor médio que o mesmo cobra em seus trabalhos cadastrados no sistema.<br>
@@ -516,7 +516,8 @@ SELECT GET_MEDIA_USUARIO(5)
 ```shell
 SELECT GET_MEDIA_VALOR_HORA (5)
 ```
-<img>
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/MEDIA_VALOR_HORA.PNG"></p>
 <br>
 
 * [SERVIÇOS ABERTOS](https://github.com/duraes-antonio/resolveae_bd2/blob/master/FUNCTIONS/GET_SERVICOS_ABERTOS.sql#L3): Função que retorna os ID's dos contratos que ainda não foram concluídos, onde sua data de fim do serviço está nula, a função recebe como parâmetro o ID de um usuário e então retorna os ID's dos seus contratos em abertos. A função é utilizada para que o prestador possa ter um controle dos contratos que ainda não foram finalizados e também a função é utilizada como auxílio para a montagem de uma das páginas do sistema.
@@ -525,8 +526,8 @@ SELECT GET_MEDIA_VALOR_HORA (5)
 ```shell
 SELECT GET_SERVICOS_ABERTOS (1)
 ```
-
-<img>
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/SERVICOS_ABERTOS.PNG"></p>
 <br>
 <br>
 
@@ -541,8 +542,8 @@ Pensado na possibilidade de que dados não validados passem pelo sistema as asse
 ```shell
 UPDATE SERVICO SET VALOR = 0 WHERE ID=1
 ```
-
-<img>
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/CHECK_VALORES.PNG"></p>
 <br>
 
 * [DATA INICIO FIM INFORMACAO PROFISSIONAL](https://github.com/duraes-antonio/resolveae_bd2/blob/master/ASSERT/ASSERT_INFOPRO_DATAS_INICIO_FIM.sql) e [DATA INICIO FIM CONTRATO](https://github.com/duraes-antonio/resolveae_bd2/blob/master/ASSERT/ASSERT_CONTRATO_DATAS_INICIO_FIM.sql): As duas <i>asserts</i> possuem papeis semelhantes, mudando apenas o ambiente onde atuam, através dela é bloqueado intervalos de datas invalidos, onde os limites superiores sao menores que seus limites inferiores.<br>
@@ -550,28 +551,30 @@ UPDATE SERVICO SET VALOR = 0 WHERE ID=1
 ```shell
 UPDATE info_profissional SET data_fim = '01-10-1986' WHERE id =1
 ```
-
-<img>
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/INFOPRO_DATAS.PNG"></p>
 <br>
 
 ```shell
 UPDATE contrato SET data_fim = '01-01-1988' WHERE ID = 2
 ```
-
-<img>
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/CONTRATO_DATAS.PNG"></p>
 <br><br>
 
 ##### TRIGGER'S<br>
 
 * [ATAULIZAÇÃO CONTRATO](https://github.com/duraes-antonio/resolveae_bd2/blob/master/TRIGGERS/TRIGGER_ATUALIZACAO_CONTRATO.sql): A <i>trigger</i> é responsável para para que todas as alterações feitas em um contrato sejam registradas, no caso é guardado na própria tabela contrato, onde existe uma coluna chamada DATA ULT MODIFICACAO e toda vez que é alterado algo nesta tabela esta coluna é atualizada automaticamente com a data corrente da alteração, possibilitando assim um controle de alteração.<br>
 
-
 ```shell
 UPDATE CONTRATO SET DESCRICAO = 'VERIFICACAO DA TRIGGER' WHERE ID = 1
 ```
-
-<img>
-<img>
+ANTES DE EFETUAR A ALTERAÇÃO
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/CONTRATO_ANTES.PNG"></p><br>
+DEPOIS DE EFETUAR A ALTERACAO
+<p align="center">
+<img src ="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/CONTRATO_DEPOIS.PNG"></p>
 <br><br>
 
         Detalhamento sobre funcionalidade de cada código.
