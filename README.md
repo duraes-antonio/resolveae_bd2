@@ -512,10 +512,16 @@ SELECT GET_MEDIA_USUARIO(5)
 <br>
 
 * [MEDIA VALOR HORA](https://github.com/duraes-antonio/resolveae_bd2/blob/master/FUNCTIONS/GET_MEDIA_VALOR_HORA.sql): Função que retorna o valor médio da hora de um prestador informado (utiliza o ID do usuário), como na função anterior, esta é utilizada no intuito de uma exibição prévia de um perfil de prestador, informando o valor médio que o mesmo cobra em seus trabalhos cadastrados no sistema.<br>
-
 ```shell
 SELECT GET_MEDIA_VALOR_HORA (5)
 ```
+
+Serviços cadastrados do usuario
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/SELECT_SERVICOS_USUARIO5.PNG">
+</p>
+<br>
+Valor retornado da função
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/MEDIA_VALOR_HORA.PNG"></p>
 <br>
