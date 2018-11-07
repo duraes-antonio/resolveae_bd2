@@ -74,15 +74,15 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
     
 | TABELA/ATRIBUTO                | DESCRICAO                                                              |
 | ------------------------------ | ---------------------------------------------------------------------- |
-|TAB 'bairro', 'cidade', 'estado'|Optou-se por criar uma tabela para cada um desses dados, tendo em vista a redundância que teriam nos |registros da tabela 'endereco'.|
-|Campo 'sigla' (TAB 'estado')|Na tabela 'estado', o campo sigla se faz presente para agilizar comparações e buscas por estado, enquanto que o campo 'nome' serve para exibir o nome por extenso.|
-|TAB 'contato'|Originou uma tabela, pois geraria redundância, uma vez que um usuário pode ter várias formas de contato.|
-|TAB 'tipo_contato'|Originou uma tabela para fins de normalização(economia de espaço).|
-|TAB 'comentario'|Ligado à 'avaliacao', deu origem a uma tabela, pois pode ser nulo, o que consumiria espaço em vão.|
-|TAB 'avaliacao'|Tabela separada de 'usuario', pois a avaliação é opcional, o que geraria valores nulos.|
+|TAB 'bairro', 'cidade', 'estado'|Optou-se por criar uma tabela para cada um desses dados, tendo em vista a redundância que teriam nos registros da tabela 'endereco'.|
+|Campo 'sigla' (TAB 'estado')    |Na tabela 'estado', o campo sigla se faz presente para agilizar comparações e buscas por estado, enquanto que o campo 'nome' serve para exibir o nome por extenso.|
+|TAB 'contato'                   |Originou uma tabela, pois geraria redundância, uma vez que um usuário pode ter várias formas de contato.|
+|TAB 'tipo_contato'              |Originou uma tabela para fins de normalização(economia de espaço).|
+|TAB 'comentario'                |Ligado à 'avaliacao', deu origem a uma tabela, pois pode ser nulo, o que consumiria espaço em vão.|
+|TAB 'avaliacao'                 |Tabela separada de 'usuario', pois a avaliação é opcional, o que geraria valores nulos.|
 |TAB 'tipo_info_profissional'|Originou uma tabela com a finalidade de evitar redundância, já que várias informações profissionais podem se enquadrar em um mesmo tipo (graduação ou curso técnico, por exemplo).|
-|TAB 'dia_semana'|Tendo em vista que cada prestador de serviço pode dispor de N horários, e cada horário liga-se a um dia da semana, optou-se por separar os dias em uma tabela.|
-|TAB 'tipo_servico'|Como N serviços podem se enquadrar em uma mesma categoria ("Manutenção e Suporte", por exemplo), optou-se por criar uma tabela para armazenar tais tipos.|
+|TAB 'dia_semana'                |Tendo em vista que cada prestador de serviço pode dispor de N horários, e cada horário liga-se a um dia da semana, optou-se por separar os dias em uma tabela.|
+|TAB 'tipo_servico'              |Como N serviços podem se enquadrar em uma mesma categoria ("Manutenção e Suporte", por exemplo), optou-se por criar uma tabela para armazenar tais tipos.|
 |Campo 'horas_contratadas' (TAB 'contrato')|Para mensurar a duração de um serviço/projeto, o grupo aderiu à sugestão do professor de usar horas como métrica, pois é mais precisa que dias e mais adequada no cenário trabalhista.|
 
 </p>
@@ -99,10 +99,10 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|email|Email do usuário, também usado p/ acessar o sistema (login).|
-|nome|Nome completo do usuário, exibido no sistema.|
-|senha|Senha utilizada pelo usuário para acessar o sistema.|
-|sobre|Campo texto, livre para o usuário preencher com uma descrição sobre si.|
+|email               |Email do usuário, também usado p/ acessar o sistema (login).|
+|nome                |Nome completo do usuário, exibido no sistema.|
+|senha               |Senha utilizada pelo usuário para acessar o sistema.|
+|sobre               |Campo texto, livre para o usuário preencher com uma descrição sobre si.|
 
 </p>
 
@@ -112,7 +112,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|cep|Campo inteiro que representa o código de endereçamento postal.|
+|cep                 |Campo inteiro que representa o código de endereçamento postal.|
 
 </p>
 
@@ -122,7 +122,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|nome|Campo texto com o nome do bairro.|
+|nome                |Campo texto com o nome do bairro.|
 
 </p>
 
@@ -132,7 +132,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
     
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|nome|Campo texto com nome de cada cidade.|
+|nome                |Campo texto com nome de cada cidade.|
 
 </p>
 
@@ -142,8 +142,8 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|nome|Campo texto com nome (completo) do estado, acentuado e sem abreviações.|
-|sigla|Campo texto com 2 caracteres representando a sigla de cada UF.|
+|nome                |Campo texto com nome (completo) do estado, acentuado e sem abreviações.|
+|sigla               |Campo texto com 2 caracteres representando a sigla de cada UF.|
 
 </p>
 
@@ -153,7 +153,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|descricao|Campo texto com o conteúdo(link, nome de usuário ou número de telefone, p.e.) do contato.|
+|descricao           |Campo texto com o conteúdo(link, nome de usuário ou número de telefone, p.e.) do contato.|
 
 </p>
 
@@ -163,7 +163,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|nome|Campo texto com o tipo (Facebook, Lattes, Whatsapp, Telefone, Celular, Twitter, ...) do contato.|
+|nome                |Campo texto com o tipo (Facebook, Lattes, Whatsapp, Telefone, Celular, Twitter, ...) do contato.|
 
 </p>
 
@@ -173,9 +173,9 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|descricao|Campo texto com breve descrição sobre a experiência que o indivíduo teve.|
-|data_inicio|Data aproximada em que o indivíduo iniciou a experiência profissional ou formação.|
-|data_fim| Data aproximada em que o indivíduo concluiu a experiência profissional ou formação.|
+|descricao           |Campo texto com breve descrição sobre a experiência que o indivíduo teve.|
+|data_inicio         |Data aproximada em que o indivíduo iniciou a experiência profissional ou formação.|
+|data_fim            | Data aproximada em que o indivíduo concluiu a experiência profissional ou formação.|
 
 </p>
 
@@ -185,7 +185,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|nome|Campo texto com o tipo (Domínio tecnológico, curso técnico, graduação, trabalho, ...) da informação.|
+|nome                |Campo texto com o tipo (Domínio tecnológico, curso técnico, graduação, trabalho, ...) da informação.|
 
 </p>
 
@@ -195,9 +195,9 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|inicio|Campo tempo que representa o horário que o prestador começou ou pode começar uma atividade.|
-|fim|Campo tempo que representa o horário que o prestador finalizou ou poderá concluir uma atividade.|
-|disponivel|Campo lógico, indica se o intervalo do horário encontra-se disponível ou ocupado.|
+|inicio              |Campo tempo que representa o horário que o prestador começou ou pode começar uma atividade.|
+|fim                 |Campo tempo que representa o horário que o prestador finalizou ou poderá concluir uma atividade.|
+|disponivel          |Campo lógico, indica se o intervalo do horário encontra-se disponível ou ocupado.|
 
 </p>
 
@@ -207,7 +207,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|nome|Campo textual que armazena o nome de cada dia (Domingo, Segunda-feira, Terça-feira, ...).|
+|nome                |Campo textual que armazena o nome de cada dia (Domingo, Segunda-feira, Terça-feira, ...).|
 
 </p>
 
@@ -217,22 +217,22 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|data_inicio| Data (dia/mês/ano) que marca o início da prestação de serviço.|
-|data_fim| Data (dia/mês/ano) que marca o fim da prestação de serviço.|
-|data_ult_modif| Data e horário da modificação mais recente no termo/contrato.|
-|descricao| Campo que representa textualmente as características e peculiaridades do serviço que será contratado.|
-|horas_contratadas| Campo inteiro que indica o número de horas que o profissional foi contratado pelo cliente.<br><br>|
+|data_inicio         | Data (dia/mês/ano) que marca o início da prestação de serviço.|
+|data_fim            | Data (dia/mês/ano) que marca o fim da prestação de serviço.|
+|data_ult_modif      | Data e horário da modificação mais recente no termo/contrato.|
+|descricao           | Campo que representa textualmente as características e peculiaridades do serviço que será contratado.|
+|horas_contratadas   | Campo inteiro que indica o número de horas que o profissional foi contratado pelo cliente.|
 
 </p>
 
-13. SERVICO: Tabela que armazena informações sobre o serviço prestado pelo profissional.
+1.  SERVICO: Tabela que armazena informações sobre o serviço prestado pelo profissional.
 
 <p align="center">
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|valor| Campo numérico real que representa o preço cobrado para realização do serviço.|
-|titulo| Campo textual que representa um breve título sobre o serviço.|
+|valor               | Campo numérico real que representa o preço cobrado para realização do serviço.|
+|titulo              | Campo textual que representa um breve título sobre o serviço.|
 
 </p>
 
@@ -242,7 +242,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|nome| Campo texto que representa a área (Banco de dados, Design, Desenvolvimento, ...) do serviço.|
+|nome                | Campo texto que representa a área (Banco de dados, Design, Desenvolvimento, ...) do serviço.|
 
 </p>
 
@@ -252,7 +252,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
     
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|nome| Campo texto que simboliza o subtipo (Adm. de Banco de Dados, Análise de B.I., Ciência de Dados, ...).<br><br>[Subcategorias de Banco de Dados] do serviço.|
+|nome                | Campo texto que simboliza o subtipo (Adm. de Banco de Dados, Análise de B.I., Ciência de Dados, ...).<br><br>[Subcategorias de Banco de Dados] do serviço.|
 
 </p>
 
@@ -263,7 +263,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
     
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|nota| Campo inteiro que representa o quão satisfeito o cliente ficou com o serviço, varia de 1 a 5.|
+|nota                | Campo inteiro que representa o quão satisfeito o cliente ficou com o serviço, varia de 1 a 5.|
 
 </p>
 
@@ -274,7 +274,7 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
     
 | ATRIBUTO           | DESCRICAO                                                            |
 | -------------------| ---------------------------------------------------------------------|
-|comentario|Campo textual que contém a opinião do cliente sobre o serviço contratado.|
+|comentario          |Campo textual que contém a opinião do cliente sobre o serviço contratado.|
 
 </p>
 
@@ -292,7 +292,9 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 ### 8. INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 Os inserts podem ser acessados [aqui](https://github.com/duraes-antonio/resolveae_bd2/tree/master/SQL).
 
-#### 8.1 DETALHAMENTO DAS INFORMAÇÕES
+#### 8.1 DETALHAMENTO DAS INFORMAÇÕES<br>
+O banco de dados para este trabalho, por se tratar de um grande quantidade de dados, foi gerado utilizando um script em python, que pode ser acessador [aqui](https://github.com/duraes-antonio/ResolveAE/tree/master/Persistencia/Scripts), neste script é utilizado como fonte arquivos JSON, onde é possível encontrar um coleção de dados que foram originado de pesquisar em sites no qual disponibilizam dados pessoais falsos (ou não, vai saber) e sites que disponibilizavam bancos de dados antigos com informações referentes a localização.<br>
+
         Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
         Referenciar todas as fontes referentes a:
         a) obtenção dos dados
