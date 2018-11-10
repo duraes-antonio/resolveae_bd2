@@ -1,5 +1,5 @@
 CREATE OR REPLACE FUNCTION insert_endereco
-(bairro_nome VARCHAR, cidade_nome VARCHAR, estado_sigla VARCHAR, cep_novo INTEGER, usuario_id INTEGER)
+(bairro_nome VARCHAR, cidade_nome VARCHAR, estado VARCHAR, cep_novo INTEGER, usuario_id INTEGER)
 RETURNS INTEGER
 AS $$
 
@@ -12,7 +12,7 @@ DECLARE
 BEGIN
 
 	--Obtenha o ID do estado recebido;
-	SELECT e.id FROM estado e WHERE e.sigla ILIKE estado_sigla INTO estado_id;
+	SELECT e.id FROM estado e WHERE (e.sigla ILIKE estado OR e.nome ILIKE estado) INTO estado_id;
 	
 	--Obtenha o ID da cidade com nome recebido;
 	SELECT c.id FROM cidade c WHERE c.nome ILIKE cidade_nome AND c.fk_estado = estado_id INTO cidade_id;

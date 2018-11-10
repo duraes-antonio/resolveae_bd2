@@ -1,0 +1,8 @@
+SELECT
+	contato.id AS contato_id,
+	contato.descricao AS contato_descricao,
+	contato.fk_usuario AS contato_fk_usuario,
+	contato.fk_tipo_contato AS contato_fk_tipo_contato,
+	tipo_contato.nome AS tipo_contato_nome
+FROM contato
+	INNER JOIN tipo_contato ON contato.fk_tipo_contato = tipo_contato.id;
