@@ -637,12 +637,15 @@ DEPOIS DE EFETUAR A ALTERACAO
 
 ```sql
 
+--Extensão para calcular similaridade entre textos;
+CREATE EXTENSION pg_trgm;
+
 /*
  *Objetivo: Agilizar a busca por um usuário por email, além de agilizar seu login
  *(busca de email e senha).
  *Justificativa: Login é uma atividade que deve ter baixa latência.
  */
-CREATE INDEX idx_email ON resolve_teste.public.usuario(email);
+CREATE INDEX idx_email ON usuario USING gin(email gin_trgm_ops);
 
 /*
  *Objetivo: Agilizar a busca por informações profissionais de um usuário.
@@ -656,9 +659,6 @@ CREATE INDEX idx_fk_usuario ON resolve_teste.public.info_profissional(fk_usuario
  */
 CREATE INDEX idx_fk_usuario ON resolve_teste.public.contato(fk_usuario);
 
-
---Extensão para calcular similaridade entre textos;
-CREATE EXTENSION pg_trgm;
 --Objetivo geral: Agilizar a busca por serviços (Funcionalidade chave do sistema)
 
 /*
