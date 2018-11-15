@@ -323,7 +323,7 @@ Cada email é gerado a partir do nome completo do usuário, um ou mais separador
 Devido o tempo de resposta do módulo Faker ser considerado pouco viável pelo grupo, optamos por dispensar o uso da ferramenta, considerando também a chance de duplicidade e pouco controle dos dados que o módulo trabalha.<br><br>
         
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS (ARQUIVO ÚNICO COM):
-Não é possivel gerar um arquivo unico, visto que o GitHub possui limitação de arquivo de 100Mb, porem é possivel acessar todas essas informações [aqui](https://github.com/duraes-antonio/resolveae_bd2/tree/master/SQL).<br>
+Não é possivel hospedar um arquivo unico, visto que o GitHub possui limitação de arquivo de 100Mb, porem é possivel acessar todas essas informações [aqui](https://github.com/duraes-antonio/resolveae_bd2/tree/master/SQL) ou arquivo único no [Google Drive](https://drive.google.com/open?id=1b3JMyIVVsNKCD-pDoVGQalPUd5SD8XJh).<br>
 
         a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD 
         b) inclusão das instruções de inserção dos dados nas referidas tabelas
@@ -647,8 +647,8 @@ DEPOIS DE EFETUAR A ALTERACAO
 * OBS. 4: O formato customizado/dump (parâmetro "-Fc") foi escolhido para backup.
 * OBS. 5: Para mensurar o tempo gasto na execução dos comandos foi utilizado o comando "time" (presente em boa parte das distribuições Linux).<br>
 
-[script_unico_create_insert](https://drive.google.com/open?id=1b3JMyIVVsNKCD-pDoVGQalPUd5SD8XJh)<br>
-[arquivo_backup](https://drive.google.com/open?id=1Lwb7tDdXAJW39Ba7K4YqXNtxMx459s4h)<br>
+[script_unico_create_insert](https://drive.google.com/open?id=1b3JMyIVVsNKCD-pDoVGQalPUd5SD8XJh)[Sem índices]<br>
+[arquivo_backup](https://drive.google.com/open?id=1Lwb7tDdXAJW39Ba7K4YqXNtxMx459s4h)[Sem índices]<br>
 
 ```shell
 Comando p/ gerar backup:

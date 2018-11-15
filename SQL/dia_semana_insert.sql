@@ -1,0 +1,8 @@
+INSERT INTO dia_semana(nome) VALUES
+	('DOMINGO'),
+	('SEGUNDA-FEIRA'),
+	('TERÇA-FEIRA'),
+	('QUARTA-FEIRA'),
+	('QUINTA-FEIRA'),
+	('SEXTA-FEIRA'),
+	('SÁBADO');
