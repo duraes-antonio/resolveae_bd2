@@ -630,21 +630,22 @@ DEPOIS DE EFETUAR A ALTERACAO
 * OBS. 4: O formato customizado/dump (parâmetro "-Fc") foi escolhido para backup.
 * OBS. 5: Para mensurar o tempo gasto na execução dos comandos foi utilizado o comando "time" (presente em boa parte das distribuições Linux).<br>
 
+[script_unico_create_insert](https://drive.google.com/open?id=1b3JMyIVVsNKCD-pDoVGQalPUd5SD8XJh)<br>
+[arquivo_backup](https://drive.google.com/open?id=1Lwb7tDdXAJW39Ba7K4YqXNtxMx459s4h)<br>
 
-* Comando p/ gerar backup:
 ```shell
+Comando p/ gerar backup:
 time pg_dump -Fc NOME_DATABASE > NOME_ARQ_SAIDA.dump -O -x
-```
-* Comando p/ restauração (c/ Backup):
-```shell
+
+Comando p/ restauração (c/ Backup):
 time pg_restore -d NOME_DATABASE_NOVO NOME_ARQ_BACKUP.dump
-```
-* Comando p/ 'restauração' (c/ SQL):
-```shell
+
+Comando p/ recriação (c/ SQL):
 time psql -d NOME_DATABASE_NOVO -f NOME_ARQ_SQL_UNICO.sql
 ```
-* Comando p/ calcular o tamanho do banco (em bytes):
-```shell
+
+```sql
+--Comando p/ calcular o tamanho do banco (em bytes):
 SELECT pg_database_size('NOME_DATABASE');
 ```
 
