@@ -304,7 +304,7 @@ O banco de dados para este trabalho, por se tratar de um grande quantidade de da
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS (ARQUIVO ÚNICO COM):
 Não é possivel gerar um arquivo unico, visto que o GitHub possui limitação de arquivo de 100Mb, porem é possivel acessar todas essas informações [aqui](https://github.com/duraes-antonio/resolveae_bd2/tree/master/SQL).<br>
 
-        a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD
+        a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD 
         b) inclusão das instruções de inserção dos dados nas referidas tabelas
         c) inclusão das instruções para execução de outros procedimentos necessários
 
@@ -615,14 +615,48 @@ DEPOIS DE EFETUAR A ALTERACAO
 ## Data de Entrega: (31/10/2018)
 
 #### 9.7 Backup do Banco de Dados<br>
-        Detalhamento do backup.
-        a) Tempo
-        b) Tamanho
-        c) Teste de restauração (backup)
-        d) Tempo para restauração
-        e) Teste de restauração (script sql)
-        f) Tempo para restauração (script sql)
+>Detalhamento do backup.<br>
+>a) Tempo<br>
+>b) Tamanho<br>
+>c) Teste de restauração (backup)<br>
+>d) Tempo para restauração<br>
+>e) Teste de restauração (script sql)<br>
+>f) Tempo para restauração (script sql)<br>
 <br>
+
+* OBS. 1: Os comandos foram executados diretamente em linha de comando via PSQL.
+* OBS. 2: Com exceção do PSQL, apenas os processos do SO e duas abas (que não emitem notificações) do navegador estavam abertas.
+* OBS. 3: A restauração com SQL foi feita usando arquivo ÚNICO contendo os CREATEs e INSERTs(em blocos de 500 mil registros) de cada entidade.
+* OBS. 4: O formato customizado/dump (parâmetro "-Fc") foi escolhido para backup.
+* OBS. 5: Para mensurar o tempo gasto na execução dos comandos foi utilizado o comando "time" (presente em boa parte das distribuições Linux).<br>
+
+
+* Comando p/ gerar backup:
+```shell
+time pg_dump -Fc NOME_DATABASE > NOME_ARQ_SAIDA.dump -O -x
+```
+* Comando p/ restauração (c/ Backup):
+```shell
+time pg_restore -d NOME_DATABASE_NOVO NOME_ARQ_BACKUP.dump
+```
+* Comando p/ 'restauração' (c/ SQL):
+```shell
+time psql -d NOME_DATABASE_NOVO -f NOME_ARQ_SQL_UNICO.sql
+```
+* Comando p/ calcular o tamanho do banco (em bytes):
+```shell
+SELECT pg_database_size('NOME_DATABASE');
+```
+
+O tamanho da base de dados após todas inserções é de aprox. 1319.216 MiB (1383298535 bytes) [11M 877k 197 registros].
+
+O tempo gasto para criar o backup, restaurar a base e o tamanho do arquivo de backup e do SQL estão na tabela abaixo.
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM97/tabela.png"></p><br>
+
+A configuração da máquina e do sistema usado no testes estão logo abaixo.
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM97/config.png"></p><br>
 
 
 #### 9.8 APLICAÇAO DE ÍNDICES E TESTES DE PERFORMANCE<br>
