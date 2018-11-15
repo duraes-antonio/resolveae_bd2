@@ -293,13 +293,34 @@ O feedback do cliente também deve ter seu espaço, portanto, deseja-se poder av
 Os inserts podem ser acessados [aqui](https://github.com/duraes-antonio/resolveae_bd2/tree/master/SQL).
 
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES<br>
-O banco de dados para este trabalho, por se tratar de um grande quantidade de dados, foi gerado utilizando um script em python, que pode ser acessador [aqui](https://github.com/duraes-antonio/ResolveAE/tree/master/Persistencia/Scripts), neste script é utilizado como fonte arquivos JSON, onde é possível encontrar um coleção de dados que foram originado de pesquisar em sites no qual disponibilizam dados pessoais falsos (ou não, vai saber) e sites que disponibilizavam bancos de dados antigos com informações referentes a localização.<br>
 
-        Detalhamento sobre as informações e processo de obtenção ou geração dos dados.
-        Referenciar todas as fontes referentes a:
-        a) obtenção dos dados
-        b) obtenção de códigos reutilizados
-        c) fontes de estudo para desenvolvimento do projeto
+>Detalhamento sobre as informações e processo de obtenção ou geração dos dados.<br>
+>Referenciar todas as fontes referentes a:<br>
+>a) obtenção dos dados<br>
+>b) obtenção de códigos reutilizados<br>
+>c) fontes de estudo para desenvolvimento do projeto<br>
+
+<br>O banco de dados para este trabalho, por se tratar de um grande quantidade de dados, foi gerado utilizando um conjunto de scripts em Python, que pode ser acessado [aqui](https://github.com/duraes-antonio/ResolveAE/tree/master/Persistencia/Scripts). Neste script são utilizados como fonte de dados: arquivos JSON, SQL e CSV, além de sites no qual disponibilizam dados pessoais falsos. O Script é responsável por gerar TODO (modelo físico e cada linha de inserção) sql usado neste trabalho.
+<br>
+
+* Áreas da TI: Gerada a partir da lista da [Veja](https://veja.abril.com.br/tecnologia/as-11-areas-mais-valorizadas-de-ti-e-seus-salarios/) e [Impacta](https://www.impacta.com.br/blog/2018/02/28/conheca-5-especializacoes-na-area-de-ti/);
+* Bairros, municípios, estados: CSV obtido pelo [CEP Aberto](http://cepaberto.com/downloads/new)(Gratuito, requer apenas cadastro);
+* Comentários, Dias da semana, Nome de mídias sociais e meios de contato: Valores preenchidos pelo grupo;
+* DDDs: Obtidos via lista na [Wikipédia](https://pt.wikipedia.org/wiki/Discagem_direta_a_dist%C3%A2ncia);
+* Frameworks: Obtido a partir do ranking do [HotFrameworks](https://hotframeworks.com/);
+* Ferramentas para monitar rede de comp.: [CompariTech](https://www.comparitech.com/net-admin/network-monitoring-tools/);
+* Linguagens de programação: [WhoIsHostingThis](https://www.whoishostingthis.com/resources/programming/);
+* Nomes de pessoas: [Exame](https://exame.abril.com.br/brasil/os-100-nomes-de-bebes-mais-populares-de-2017/), Nome e Mais Nomes [[Nomes femininos]](http://nomesportugueses.blogspot.com/p/nomes-brasileiros-de-z.html)/[[Nomes masculinos]](http://nomesportugueses.blogspot.com/2009/04/nomes-masculinos-de-a-z.html);
+* Provedores de email: [Future Behind](https://www.futurebehind.com/melhores-alternativas-ao-gmail/);
+* SGBDs: Baseada no ranking do [DB Engines](https://db-engines.com/en/ranking);
+* Sobrenomes: [TiltedLogic](http://www.tiltedlogic.org/Familia/surnames-all.php?tree=);
+* Tipos de serviços da TI/Computação: Gerados a partir da lista da [FIERN](https://www.fiern.org.br/governanca/wp-content/uploads/arquivos/documentos/DOC_CATALOGO_SERVICOS_TI.pdf) e [UFRGS](https://www1.ufrgs.br/catalogoti/);
+* Valores numéricos, datas, horários, números telefônicos, números de CEPs, tipos de aplicações de Sistemas de Informação: Gerados a partir de itens(randint, uniform, choice) do módulo random e conhecimento do grupo.<br>
+
+O nome completo de cada usuário é a junção de um nome com dois ou mais sobrenomes.<br>
+Cada email é gerado a partir do nome completo do usuário, um ou mais separadores e um número inteiro randômico.<br>
+
+Devido o tempo de resposta do módulo Faker ser considerado pouco viável pelo grupo, optamos por dispensar o uso da ferramenta, considerando também a chance de duplicidade e pouco controle dos dados que o módulo trabalha.<br><br>
         
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS (ARQUIVO ÚNICO COM):
 Não é possivel gerar um arquivo unico, visto que o GitHub possui limitação de arquivo de 100Mb, porem é possivel acessar todas essas informações [aqui](https://github.com/duraes-antonio/resolveae_bd2/tree/master/SQL).<br>
@@ -488,10 +509,6 @@ SELECT * FROM VIEW_SUBTIPO_SERVICO LIMIT 10
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/VIEWS/view_subtiposervico.PNG"></p>
 
 Em nosso banco um usuario tem a possibilidade de cadastrar subtipos de serviço, porem este subtipo deve estra atrelado a um tipo, tendo esta relação o subtipo serviço guarda um id, o que nao é legivel para o usuario, para trazer a informaão com mais foco de mundo real foi criada esta <i>view</i>.<br><br>
-
-
-
-
 
         a) Descrição da view sobre que grupos de usuários (operacional/estratégico) <br>
         e necessidade ela contempla.
@@ -766,8 +783,40 @@ Machine learning in Python with scikit-learn: https://www.youtube.com/playlist?l
 ### 10. ATUALIZAÇÃO DA DOCUMENTAÇÃO/ SLIDES E ENTREGA FINAL<br><br>
 
 ### 11. REFERÊNCIAS
- 1. G1. "Tecnologia no Brasil volta crescer em 2017 e mantém país entre os 10 maiores mercados do mundo". Acesso em 16/09/2018. Disponível em: https://g1.globo.com/economia/tecnologia/noticia/tecnologia-no-brasil-volta-crescer-em-2017-e-mantem-pais-entre-os-10-maiores-mercados-do-mundo.ghtml<br>
- 2. PostgreSQL. "CREATE TABLE". Acesso em 05/10/2018. Disponível em: https://www.postgresql.org/docs/9.1/static/sql-createtable.html<br><br>
+
+CEP ABERTO. Acesso em 10/10/2018. Disponível em: http://cepaberto.com/downloads/new<br>
+
+COMPARITECH. “25 best network monitoring tools and software of 2018”. Acesso em 12/11/2018. Disponível em: https://www.comparitech.com/net-admin/network-monitoring-tools/<br>
+
+DB-ENGINES. “DB-Engines Ranking”. Acesso em 12/11/2018. Disponível em: https://db-engines.com/en/ranking<br>
+
+EXAME. “Os 100 nomes de bebês mais populares de 2017”. Acesso em 10/10/2018. Disponível em: https://exame.abril.com.br/brasil/os-100-nomes-de-bebes-mais-populares-de-2017/<br>
+
+FIERN. “Catálogo De Serviços De Ti”. Acesso em 12/11/2018. Disponível em: https://www.fiern.org.br/governanca/wp-content/uploads/arquivos/documentos/DOC_CATALOGO_SERVICOS_TI.pdf<br>
+
+FUTURE BEHIND. “Há Mais Mundo Além Do Gmail. Conheça Serviços Alternativos De Email”. Acesso em 10/10/2018. Disponível em: https://www.futurebehind.com/melhores-alternativas-ao-gmail/<br>
+
+G1. "Tecnologia no Brasil volta crescer em 2017 e mantém país entre os 10 maiores mercados do mundo". Acesso em 16/09/2018. Disponível em: https://g1.globo.com/economia/tecnologia/noticia/tecnologia-no-brasil-volta-crescer-em-2017-e-mantem-pais-entre-os-10-maiores-mercados-do-mundo.ghtml<br>
+
+HOT FRAMEWORKS. “Find your new favorite web framework”. Acesso em 12/11/2018. Disponível em: https://hotframeworks.com/<br>
+
+IMPACTA. “Conheça as 5 principais especializações na área de TI”. Acesso em 10/10/2018. Disponível em: https://www.impacta.com.br/blog/2018/02/28/conheca-5-especializacoes-na-area-de-ti/<br>
+
+NOMES E MAIS NOMES. “Nomes brasileiros de A-Z para meninas”. Acesso em 10/10/2018. Disponível em: http://nomesportugueses.blogspot.com/p/nomes-brasileiros-de-z.html<br>
+
+NOMES E MAIS NOMES. “Nomes masculinos de A a Z”. Acesso em 10/10/2018. Disponível em: http://nomesportugueses.blogspot.com/2009/04/nomes-masculinos-de-a-z.html<br>
+
+PostgreSQL. "CREATE TABLE". Acesso em 05/10/2018. Disponível em: https://www.postgresql.org/docs/9.1/static/sql-createtable.html<br>
+
+TILTEDLOGIC. “Lista de sobrenomes”. Acesso em 10/10/2018. Disponível em: http://www.tiltedlogic.org/Familia/surnames-all.php?tree=<br>
+
+UFRGS. “Serviços de TI por categoria”. Acesso em 12/10/2018. Disponível em: https://www1.ufrgs.br/catalogoti/<br>
+
+VEJA. “As 11 áreas mais valorizadas de TI – e seus salários”. Acesso em 13/10/2018. Disponível em: https://veja.abril.com.br/tecnologia/as-11-areas-mais-valorizadas-de-ti-e-seus-salarios/<br>
+
+WHO IS HOSTING THIS. “The 100+ Most Popular Programming Languages”. Acesso em 13/11/2018. Disponível em: https://www.whoishostingthis.com/resources/programming/<br>
+
+WIKIPÉDIA. “Discagem direta a distância”. Acesso em 12/11/2018. Disponível em: https://pt.wikipedia.org/wiki/Discagem_direta_a_dist%C3%A2ncia<br><br>
 
 ### 12. FORMATACAO NO GIT
 ["Basic writing and formatting syntax"](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
