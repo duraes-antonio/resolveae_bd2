@@ -678,71 +678,73 @@ A configuração da máquina e do sistema usado no testes estão logo abaixo.
 
 
 #### 9.8 APLICAÇAO DE ÍNDICES E TESTES DE PERFORMANCE<br>
-    a) Lista de índices, tipos de índices com explicação de porque foram implementados nas consultas 
-    b) Performance esperada VS Resultados obtidos
-    c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices (constando velocidade esperada com planejamento, sem indice e com índice Vs velocidade de execucao real com índice e sem índice).
-    d) Escolher as consultas mais complexas para serem analisadas (consultas com menos de 2 joins não serão aceitas)
-    e) As imagens do Explain devem ser inclusas no trabalho, bem como explicações sobre os resultados obtidos.
-    f) Inclusão de tabela mostrando as 10 execuções, excluindo-se o maior e menor tempos para cada consulta e 
-    obtendo-se a media dos outros valores como resultado médio final.
-<br>
+> a) Lista de índices, tipos de índices com explicação de porque foram implementados nas consultas.<br>
+> b) Performance esperada VS Resultados obtidos.<br>
+> c) Tabela de resultados comparando velocidades antes e depois da aplicação dos índices (constando velocidade esperada com planejamento, sem indice e com índice Vs velocidade de execucao real com índice e sem índice).<br>
+> d) Escolher as consultas mais complexas para serem analisadas (consultas com menos de 2 joins não serão aceitas).<br>
+> e) As imagens do Explain devem ser inclusas no trabalho, bem como explicações sobre os resultados obtidos.<br>
+> f) Inclusão de tabela mostrando as 10 execuções, excluindo-se o maior e menor tempos para cada consulta e obtendo-se a media dos outros valores como resultado médio final.<br>
+
+* OBS.: A lista de índices criados (8, no total), podem ser conferidas [aqui](https://github.com/duraes-antonio/resolveae_bd2/blob/master/TESTE%20INDICE/QUERY/indices.sql) e a lista de consultas que origiram as examinadas abaixo encontram-se [aqui](https://github.com/duraes-antonio/resolveae_bd2/blob/master/TESTE%20INDICE/QUERY/QUERYS_TESTE_INDICE.sql). Os prints com registro do tempo de execução, criação e explain podem ser conferidos [neste link](https://github.com/duraes-antonio/resolveae_bd2/tree/master/DOCUMENTOS/IMAGENS/ITEM98).<br>
+
+Por que não usamos:
+* Hash indexes: Segundo a [documentação](https://www.postgresql.org/docs/9.5/indexes-types.html) do Postgres 9.5, é um tipo bem limitado, só trabalha com operador de igualdade. Além disso, pode ser necessário recriar o índice do tipo caso haja algum crash no banco. Há outros motivos que levam a documentação a desencorajar o uso do tipo. Sua limitação com operadores e um possível retrabalho para dar manutenção ao índice “quebrado” são os motivos de não usarmos tal tipo.
+
+* GiST: Também segundo a [documentação](https://www.postgresql.org/docs/9.1/textsearch-indexes.html) do Postgres 9.1, tal classe pode produzir falsas correspondências, o que se resume no SGBD realizar buscas não úteis. A mesma documentação diz também que, comparado ao tipo GIN, os índices GiST são construídos cerca de três vezes mais rápido (algo de fato ocorreu para 6 dos 8 índices), duas a três vezes menores e atualizados mais rapidamente. Embora pareça muito vantajoso, o grupo optou por priorizar a velocidade de busca (textuais), e neste caso, GiST pode ser aproximadamente três vezes mais lentos que GIN.<br>
+
+Por que usamos:
+* GIN: Tal como GiST, este é um tipo recomendado para trabalhar com busca de dados que vão além dos operadores básicos (=, <=, >=, !=, ...), dados textuais e geométricos, por exemplo. Optamos por tal tipo devido sua velocidade de realizar buscas textuais no formato “%TEXTO%”, que são executadas mais rapidamente do que pelo tipo GiST. Foi uma escolha difícil, tendo em vista a semelhança de desempenho de ambos tipos.
+
+* B-Tree: Diferentemente dos tipos GIN e GiST que não suportam a criação nativa de índices para campos do tipo inteiro (é necessário instalar as extensões “btree_gin” e “btree_gist”), o tipo B-Tree possui maior desempenho para tal tipo de dado e operadores básicos (Tanto que se destaca nas 10 execuções da 2ª query e metade das execuções da 3ª query, que envolvem muitas chaves estrangeiras e operadores de igualdade).<br>
+
+A tabela abaixo mostra o tempo de criação dos índices em cada um dos 3 tipos (B-Tree, GIN, GiST):
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/tabela_0.png"></p><br>
 
 ```sql
---Extensão para calcular similaridade entre textos;
-CREATE EXTENSION pg_trgm;
-
-/*
- *Objetivo: Agilizar a busca por um usuário por email, além de agilizar seu login
- *(busca de email e senha).
- *Justificativa: Login é uma atividade que deve ter baixa latência.
- */
-CREATE INDEX idx_email_usuario ON usuario USING gin(email gin_trgm_ops);
-
-/*
- *Objetivo: Agilizar a busca por informações profissionais de um usuário.
- *Justificativa: Consulta de perfil de um usuário é realizada frequentemente.
- */
-CREATE INDEX idx_fk_usuario_info_pro ON info_profissional(fk_usuario);
-
-/*
- *Objetivo: Agilizar a busca por meios de contato de um usuário.
- *Justificativa: Consulta de perfil de um usuário é realizada frequentemente.
- */
-CREATE INDEX idx_fk_usuario_contato ON contato(fk_usuario);
-
---Objetivo geral: Agilizar a busca por serviços (Funcionalidade chave do sistema)
-
-/*
- *Objetivo: Agilizar a busca por serviços usando fragmentos de seu título.
- *Justificativa: A busca de serviço por seu título é uma funcionalidade core
-  e acessada frequentemente.
- */
-CREATE INDEX idx_trgm_titulo_servico ON servico
-USING gin(titulo gin_trgm_ops);
-
-/*
- *Objetivo: Agilizar a busca por serviços usando uma parte de sua descrição.
- *Justificativa: Segunda opção de busca por serviço que será mais utilizada.
- */
-CREATE INDEX idx_trgm_descricao_servico ON servico
-USING gin(descricao gin_trgm_ops);
-
-/*
- *Objetivo: Agilizar a busca por serviços por meio da identificação do prestador.
- *Justificativa: Viabilizar e acelerar a busca de serviços por meio de dados do
-  responsável por prestá-lo.
- */
-CREATE INDEX idx_fk_usuario_servico ON servico(fk_usuario);
-
-
-/*
- *Objetivo: Agilizar a busca por serviços de determinados subtipos(subtagorias);
- *Justificativa: A busca de serviços por seus subtipos é uma operação crucial
-  e muito acessada.
- */
-CREATE INDEX idx_fk_servico_sss ON servico_subtipo_servico(fk_servico);
-CREATE INDEX idx_fk_subtipo_servico_sss ON servico_subtipo_servico(fk_subtipo_servico);
+--Consulta 1: Buscando informações de serviços que tenham a palavra "Python" na descrição.
+EXPLAIN ANALYZE
+SELECT U.*, S.*, TS.NOME, SS.nome FROM USUARIO AS U
+INNER JOIN SERVICO AS S ON U.ID = S.FK_USUARIO
+INNER JOIN SERVICO_SUBTIPO_SERVICO AS SBS ON S.ID = SBS.FK_SERVICO
+INNER JOIN SUBTIPO_SERVICO AS SS ON SS.ID = SBS.FK_SUBTIPO_SERVICO
+INNER JOIN TIPO_SERVICO AS TS ON TS.ID = SS.FK_TIPO_SERVICO
+WHERE S.descricao ILIKE '%python%';
 ```
+Tempo de planejamento e de execução da QUERY 1 [sem índice, com B-Tree, GIN e GiST]:
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/tabela_1.png"></p><br>
+
+```sql
+--Consulta 2: Buscando informações de todos serviços prestados por um usuário.
+EXPLAIN ANALYZE
+SELECT IP.* FROM INFO_PROFISSIONAL AS IP
+INNER JOIN SERVICO AS S ON IP.FK_USUARIO = S.FK_USUARIO
+INNER JOIN SERVICO_SUBTIPO_SERVICO AS SBS ON S.ID = SBS.FK_SERVICO
+INNER JOIN SUBTIPO_SERVICO AS SS ON SS.ID = SBS.FK_SUBTIPO_SERVICO
+INNER JOIN TIPO_SERVICO AS TS ON TS.ID = SS.FK_TIPO_SERVICO
+WHERE IP.FK_USUARIO = 1042666;
+```
+Tempo de planejamento e de execução da QUERY 2 [sem índice, com B-Tree, GIN e GiST]:
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/tabela_2.png"></p><br>
+
+```sql
+--Consulta 3: Buscando todos serviços de um determinado tipo.
+EXPLAIN ANALYZE
+SELECT U.*, S.*, TS.NOME, SS.nome FROM USUARIO AS U
+INNER JOIN SERVICO AS S ON U.ID = S.FK_USUARIO
+INNER JOIN SERVICO_SUBTIPO_SERVICO AS SBS ON S.ID = SBS.FK_SERVICO
+INNER JOIN SUBTIPO_SERVICO AS SS ON SS.ID = SBS.FK_SUBTIPO_SERVICO
+INNER JOIN TIPO_SERVICO AS TS ON TS.ID = SS.FK_TIPO_SERVICO
+WHERE SBS.fk_servico = 666566;
+```
+Tempo de planejamento e de execução da QUERY 3 [sem índice, com B-Tree, GIN e GiST]:
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/tabela_3.png"></p><br>
+
+Embora tenham sido criados vários índices, 3 querys foram analisadas, devido alto tempo de pesquisa, diversas possibilidades que o planejador oferece de acordo com o dados da cláusula WHERE e tempo para tabelar os resultados.
+
 
 ## Data de Entrega: (22/11/2018)
 
@@ -806,7 +808,11 @@ NOMES E MAIS NOMES. “Nomes brasileiros de A-Z para meninas”. Acesso em 10/10
 
 NOMES E MAIS NOMES. “Nomes masculinos de A a Z”. Acesso em 10/10/2018. Disponível em: http://nomesportugueses.blogspot.com/2009/04/nomes-masculinos-de-a-z.html<br>
 
-PostgreSQL. "CREATE TABLE". Acesso em 05/10/2018. Disponível em: https://www.postgresql.org/docs/9.1/static/sql-createtable.html<br>
+POSTGRESQL. "11.2. Index Types". Acesso em 15/11/2018. Disponível em: https://www.postgresql.org/docs/9.5/indexes-types.html<br>
+
+POSTGRESQL. "12.9. GiST and GIN Index Types". Acesso em 15/11/2018. Disponível em: https://www.postgresql.org/docs/9.1/textsearch-indexes.html<br>
+
+POSTGRESQL. "CREATE TABLE". Acesso em 05/10/2018. Disponível em: https://www.postgresql.org/docs/9.1/static/sql-createtable.html<br>
 
 TILTEDLOGIC. “Lista de sobrenomes”. Acesso em 10/10/2018. Disponível em: http://www.tiltedlogic.org/Familia/surnames-all.php?tree=<br>
 
