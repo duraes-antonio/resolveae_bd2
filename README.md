@@ -325,9 +325,9 @@ Devido o tempo de resposta do módulo Faker ser considerado pouco viável pelo g
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELAS E INSERÇÃO DOS DADOS (ARQUIVO ÚNICO COM):
 Não é possivel hospedar um arquivo unico, visto que o GitHub possui limitação de arquivo de 100Mb, porem é possivel acessar todas essas informações [aqui](https://github.com/duraes-antonio/resolveae_bd2/tree/master/SQL) ou arquivo único no [Google Drive](https://drive.google.com/open?id=1b3JMyIVVsNKCD-pDoVGQalPUd5SD8XJh).<br>
 
-        a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD 
-        b) inclusão das instruções de inserção dos dados nas referidas tabelas
-        c) inclusão das instruções para execução de outros procedimentos necessários
+> a) inclusão das instruções para criação das tabelas e estruturas de amazenamento do BD<br>
+> b) inclusão das instruções de inserção dos dados nas referidas tabelas<br>
+> c) inclusão das instruções para execução de outros procedimentos necessários<br>
 
 ### 9. TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1 GERACAO DE DADOS (MÍNIMO DE 10 REGISTROS PARA CADA TABELA NO BANCO DE DADOS)<br>
@@ -338,126 +338,126 @@ Não é possivel hospedar um arquivo unico, visto que o GitHub possui limitaçã
 OBS: Incluir para os tópicos 9.2 e 9.3 as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 
 #### 9.2 SELECT DAS TABELAS COM PRIMEIROS 10 REGISTROS INSERIDOS <br> 
-```shell
+```sql
 SELECT * FROM AVALIACAO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_avaliacao.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM BAIRRO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_bairro.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM CIDADE LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_cidade.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM COMENTARIO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_comentario.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM CONTATO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_contato.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM CONTRATO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_contrato.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM DIA_SEMANA LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_diasemana.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM ENDERECO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_endereco.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM ESTADO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_estado.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM HORARIO_PRESTACAO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_horarioprestacao.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM INFO_PROFISSIONAL LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_infoprofissional.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM SERVICO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_servico.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM SERVICO_SUBTIPO_SERVICO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_servicosubtiposervico.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM SUBTIPO_SERVICO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_subtiposervico.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM TIPO_CONTATO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_tipocontato.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM TIPO_INFO_PROFISSIONAL LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_tipoinfoprofissional.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM TIPO_SERVICO LIMIT 10
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/SELECTS/select_tiposervico.PNG">
 <br></p>
 
-```shell
+```sql
 SELECT * FROM USUARIO LIMIT 10
 ```
 <p align="center">
@@ -466,10 +466,14 @@ SELECT * FROM USUARIO LIMIT 10
 
 #### 9.3 SELECT DAS VISÕES COM PRIMEIROS 10 REGISTROS DA VIEW <br>
 
+> a) Descrição da view sobre que grupos de usuários (operacional/estratégico) e necessidade ela contempla.<br>
+> b) Descrição das permissões de acesso e usuários correlacionados (após definição destas características)<br>
+> c) as funcionalidades informadas no minimundo ou nos mockups(protótipos), que representarem views do sistema (relatórios, informações disponíveis para os usuários, etc) devem estar presentes aqui.<br>
+
 As <i>views</i> geradas foram todas pensadas na questao de agiliade ao montar uma <i>query</i> para exibir certos dados para o usuario, visto que o banco possui uma grande normalização.<br><br>
 De modo geral estas <i>views</i> representam consultas basicas utilizadas pelos usuarios do sistema ao fazer uma pesquisa de um item, e para agiliar este processo foram pensadas essas <i>views</i>.<br>
 
-```shell
+```sql
 SELECT * FROM VIEW_AVALIACOES_SERVICO LIMIT 10
 ```
 <p align="center">
@@ -478,7 +482,7 @@ SELECT * FROM VIEW_AVALIACOES_SERVICO LIMIT 10
 
 <i>View</i> com foco na praticidade de se buscar informação de um serviço que esta sendo contratado pelo usuario, visto que a mesma traz uma avaliacao(nota) e o seu devido comentario, caso exista.<br><br>
 
-```shell
+```sql
 SELECT * FROM VIEW_DADOS_CONTRATO LIMIT 10
 ```
 <p align="center">
@@ -486,7 +490,7 @@ SELECT * FROM VIEW_DADOS_CONTRATO LIMIT 10
 </p>
 <i>View</i> que visa facilitar o acesso a informações de um contrato.<br><br>
 
-```shell
+```sql
 SELECT * FROM VIEW_ENDERECO_USUARIO LIMIT 10
 ```
 <p align="center">
@@ -494,7 +498,7 @@ SELECT * FROM VIEW_ENDERECO_USUARIO LIMIT 10
 </p>
 Por nosso banco normalizar o endereco essa <i>view</i> tem como foco a facilidade de resgatar o endereço de determinado usuario.<br>
 
-```shell
+```sql
 SELECT * FROM VIEW_INFO_PROFISSIONAL_USUARIO LIMIT 10
 ```
 <p align="center">
@@ -502,7 +506,7 @@ SELECT * FROM VIEW_INFO_PROFISSIONAL_USUARIO LIMIT 10
 
 Em informação profissional existem diversas categorias de informação, visando facilitar o entedimento do usario foi criada esta <i>view</i> que já faz a relação do tipo com a informação cadastrada.<br><br>
 
-```shell
+```sql
 SELECT * FROM VIEW_SUBTIPO_SERVICO LIMIT 10
 ```
 <p align="center">
@@ -510,20 +514,18 @@ SELECT * FROM VIEW_SUBTIPO_SERVICO LIMIT 10
 
 Em nosso banco um usuario tem a possibilidade de cadastrar subtipos de serviço, porem este subtipo deve estra atrelado a um tipo, tendo esta relação o subtipo serviço guarda um id, o que nao é legivel para o usuario, para trazer a informaão com mais foco de mundo real foi criada esta <i>view</i>.<br><br>
 
-        a) Descrição da view sobre que grupos de usuários (operacional/estratégico) <br>
-        e necessidade ela contempla.
-        b) Descrição das permissões de acesso e usuários correlacionados (após definição <br>
-        destas características)
-        c) as funcionalidades informadas no minimundo ou nos mockups(protótipos), que representarem 
-        views do sistema (relatórios, informações disponíveis para os usuários, etc) devem estar 
-        presentes aqui. 
-<br>
-
 #### 9.4 LISTA DE CODIGOS DAS FUNÇÕES, ASSERÇOES E TRIGGERS<br>
+
+> Detalhamento sobre funcionalidade de cada código.
+> a) Objetivo<br>
+> b) Código do objeto (função/trigger/asserção)<br>
+> c) exemplo de dados para aplicação<br>
+> d) resultados em forma de tabela/imagem<br>
+
 ##### FUNÇÕES
 * [MEDIA USUARIO](https://github.com/duraes-antonio/resolveae_bd2/blob/master/FUNCTIONS/GET_MEDIA_USUARIO.sql): Função que retorna a média do usuario informado (utiliza o ID do usuário), é utilizada no intuito de montar uma exibição prévia de um perfil de prestador no sistema.<br>
 
-```shell
+```sql
 SELECT GET_MEDIA_USUARIO(5)
 ```
 <p align="center">
@@ -531,7 +533,7 @@ SELECT GET_MEDIA_USUARIO(5)
 <br>
 
 * [MEDIA VALOR HORA](https://github.com/duraes-antonio/resolveae_bd2/blob/master/FUNCTIONS/GET_MEDIA_VALOR_HORA.sql): Função que retorna o valor médio da hora de um prestador informado (utiliza o ID do usuário), como na função anterior, esta é utilizada no intuito de uma exibição prévia de um perfil de prestador, informando o valor médio que o mesmo cobra em seus trabalhos cadastrados no sistema.<br>
-```shell
+```sql
 SELECT GET_MEDIA_VALOR_HORA (5)
 ```
 
@@ -548,7 +550,7 @@ Valor retornado da função
 * [SERVIÇOS ABERTOS](https://github.com/duraes-antonio/resolveae_bd2/blob/master/FUNCTIONS/GET_SERVICOS_ABERTOS.sql#L3): Função que retorna os ID's dos contratos que ainda não foram concluídos, onde sua data de fim do serviço está nula, a função recebe como parâmetro o ID de um usuário e então retorna os ID's dos seus contratos em abertos. A função é utilizada para que o prestador possa ter um controle dos contratos que ainda não foram finalizados e também a função é utilizada como auxílio para a montagem de uma das páginas do sistema.
 <br>
 
-```shell
+```sql
 SELECT GET_SERVICOS_ABERTOS (1)
 ```
 <p align="center">
@@ -564,7 +566,7 @@ Pensado na possibilidade de que dados não validados passem pelo sistema as asse
 
 * [VALOR SERVICO](https://github.com/duraes-antonio/resolveae_bd2/blob/master/ASSERT/ASSERT_VALOR_SERVICO.sql): <i>Assert</i> que trata o valor informado para um serviço, bloqueando valores <= 0, caso um valor nesse intervalo seja informado é disparada um erro.<br>
 
-```shell
+```sql
 UPDATE SERVICO SET VALOR = 0 WHERE ID=1
 ```
 <p align="center">
@@ -573,14 +575,14 @@ UPDATE SERVICO SET VALOR = 0 WHERE ID=1
 
 * [DATA INICIO FIM INFORMACAO PROFISSIONAL](https://github.com/duraes-antonio/resolveae_bd2/blob/master/ASSERT/ASSERT_INFOPRO_DATAS_INICIO_FIM.sql) e [DATA INICIO FIM CONTRATO](https://github.com/duraes-antonio/resolveae_bd2/blob/master/ASSERT/ASSERT_CONTRATO_DATAS_INICIO_FIM.sql): As duas <i>asserts</i> possuem papeis semelhantes, mudando apenas o ambiente onde atuam, através dela é bloqueado intervalos de datas invalidos, onde os limites superiores sao menores que seus limites inferiores.<br>
 
-```shell
+```sql
 UPDATE info_profissional SET data_fim = '01-10-1986' WHERE id =1
 ```
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/INFOPRO_DATAS.PNG"></p>
 <br>
 
-```shell
+```sql
 UPDATE contrato SET data_fim = '01-01-1988' WHERE ID = 2
 ```
 <p align="center">
@@ -591,7 +593,7 @@ UPDATE contrato SET data_fim = '01-01-1988' WHERE ID = 2
 
 * [ATAULIZAÇÃO CONTRATO](https://github.com/duraes-antonio/resolveae_bd2/blob/master/TRIGGERS/TRIGGER_ATUALIZACAO_CONTRATO.sql): A <i>trigger</i> é responsável para para que todas as alterações feitas em um contrato sejam registradas, no caso é guardado na própria tabela contrato, onde existe uma coluna chamada DATA ULT MODIFICACAO e toda vez que é alterado algo nesta tabela esta coluna é atualizada automaticamente com a data corrente da alteração, possibilitando assim um controle de alteração.<br>
 
-```shell
+```sql
 UPDATE CONTRATO SET DESCRICAO = 'VERIFICACAO DA TRIGGER' WHERE ID = 1
 ```
 ANTES DE EFETUAR A ALTERAÇÃO
@@ -602,32 +604,23 @@ DEPOIS DE EFETUAR A ALTERACAO
 <img src ="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM94/CONTRATO_DEPOIS.PNG"></p>
 <br><br>
 
-        Detalhamento sobre funcionalidade de cada código.
-        a) Objetivo
-        b) Código do objeto (função/trigger/asserção)
-        c) exemplo de dados para aplicação
-        d) resultados em forma de tabela/imagem
-<br>
-
 ## Data de Entrega: (27/09/2018)
 
 #### 9.5 Administração do banco de dados<br>
-        Descrição detalhada sobre como serão executadas no banco de dados as <br>
-        seguintes atividades.
-        a) Segurança e autorização de acesso: especificação básica de configurações de acesso remoto
-        b) Estimativas de aquisição de recursos para armazenamento e processamento da informação
-        c) Planejamento de rotinas de manutenção e monitoramento do banco
-        d) Plano com frequencia de análises visando otimização de performance
-<br>
+> Descrição detalhada sobre como serão executadas no banco de dados as seguintes atividades.<br>
+> a) Segurança e autorização de acesso: especificação básica de configurações de acesso remoto<br>
+> b) Estimativas de aquisição de recursos para armazenamento e processamento da informação<br>
+> c) Planejamento de rotinas de manutenção e monitoramento do banco<br>
+> d) Plano com frequencia de análises visando otimização de performance<br>
 
 #### 9.6 GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
-        a) principal tabela do sistema deve ter no mínimo 1,5 milhão de registros
-        b) tabelas diretamente relacionadas a tabela principal 100 mil registros
-        c) tabelas auxiliares de relacao multivalorada mínimo de 10 registros
-        d) registrar o tempo de inserção em cada uma das tabelas do banco de dados
-        e) especificar a quantidade de registros inseridos em cada tabela
-        Para melhor compreensão verifiquem o exemplo na base de testes:<br>
-        https://github.com/discipbd2/base-de-testes-locadora
+> a) principal tabela do sistema deve ter no mínimo 1,5 milhão de registros<br>
+> b) tabelas diretamente relacionadas a tabela principal 100 mil registros<br>
+> c) tabelas auxiliares de relacao multivalorada mínimo de 10 registros<br>
+> d) registrar o tempo de inserção em cada uma das tabelas do banco de dados<br>
+> e) especificar a quantidade de registros inseridos em cada tabela<br>
+> Para melhor compreensão verifiquem o exemplo na base de testes:<br>
+> https://github.com/discipbd2/base-de-testes-locadora<br>
         
 ## Data de Entrega: (31/10/2018)
 
@@ -639,7 +632,6 @@ DEPOIS DE EFETUAR A ALTERACAO
 >d) Tempo para restauração<br>
 >e) Teste de restauração (script sql)<br>
 >f) Tempo para restauração (script sql)<br>
-<br>
 
 * OBS. 1: Os comandos foram executados diretamente em linha de comando via PSQL.
 * OBS. 2: Com exceção do PSQL, apenas os processos do SO e duas abas (que não emitem notificações) do navegador estavam abertas.
@@ -701,6 +693,8 @@ A tabela abaixo mostra o tempo de criação dos índices em cada um dos 3 tipos 
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/tabela_0.png"></p><br>
 
+### QUERY #1<br>
+
 ```sql
 --Consulta 1: Buscando informações de serviços que tenham a palavra "Python" na descrição.
 EXPLAIN ANALYZE
@@ -711,9 +705,36 @@ INNER JOIN SUBTIPO_SERVICO AS SS ON SS.ID = SBS.FK_SUBTIPO_SERVICO
 INNER JOIN TIPO_SERVICO AS TS ON TS.ID = SS.FK_TIPO_SERVICO
 WHERE S.descricao ILIKE '%python%';
 ```
+#### SEM índice:
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/SEM_INDICE/1_explain.png"></p>
+
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/SEM_INDICE/1_analyze.png"></p><br>
+
+É possível notar que há 3 pontos em que o custo (processamento e memória) se concentram:
+* servico_subtipo_servico [Linha 7]: 1333624 linhas candidatas e custo de 20545.24, devido a busca ser realizada sequencialmente.
+* Loop aninhado [Linha 13]: 2080 linhas candidatas e custo de 31490.62, devido a busca sequencial realizada na tabela “servico” (Linha 14, custo 17919.22) para buscar linhas contendo a palavra buscada.
+* A quantidade de linhas candidatas é bastante alta, por mais que não serão todas executadas necessariamente, isso indica pouca eficiência par restringir os registros.<br><br>
+
+#### COM índice (GIN):
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/GIN/1_explain.png"></p>
+
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/GIN/1_analyze.png"></p><br>
+
+Pontos relevantes - Indexação GIN:
+* Ao realizar a consulta com o GIN, o planejador é bastante astuto, em vez de realizar uma busca sequencial na tabela “servico”, ele usa o índice idx_trgm_descricao_servico [Linha 8] para buscar os que possuem o termo em sua descrição.
+* O uso de índice também é aplicado à tabela “servico_subtipo_servico” (tabela que interliga as tabelas “servico” e “subtipo_servico”) [Linha 15].
+* Ao realizar o filtro nas duas tabelas acima(algo que não ocorreu na consulta sem índice), a quantidade de linhas a serem trabalhadas cai  consideravelmente , o que diminui o tempo e outros recursos gastos com joins e loops.<br><br>
+
+
 Tempo de planejamento e de execução da QUERY 1 [sem índice, com B-Tree, GIN e GiST]:
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/tabela_1.png"></p><br>
+
+### QUERY #2<br>
 
 ```sql
 --Consulta 2: Buscando informações de todos serviços prestados por um usuário.
@@ -725,9 +746,38 @@ INNER JOIN SUBTIPO_SERVICO AS SS ON SS.ID = SBS.FK_SUBTIPO_SERVICO
 INNER JOIN TIPO_SERVICO AS TS ON TS.ID = SS.FK_TIPO_SERVICO
 WHERE IP.FK_USUARIO = 1042666;
 ```
+#### SEM índice:
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/SEM_INDICE/2_explain.png"></p>
+
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/SEM_INDICE/2_analyze.png"></p><br>
+
+Novamente o tempo de execução concentra-se nas buscas sequenciais:
+* servico_subtipo_servico [Linha 9]: 555677 linhas candidatas e custo de 12765.77, devido a busca ser realizada sequencialmente.
+* servico [Linha 12]: Custo de 22780.34, devido busca sequencial pela chave estrangeira igual à solicitda.
+* info_profissional [Linha 24]: Busca sequencial com custo 25591.83, em busca da chave estrangeira solicitada.
+* pouca eficiência em filtrar os registro novamente aumentou o custo por laço.<br><br>
+
+#### COM índice (B-Tree):
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/BTREE/2_explain.png"></p>
+
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/BTREE/2_analyze.png"></p><br>
+
+Neste caso, como todos dados envolvidos na consulta são do tipo chave estrangeira e primárias, portanto, inteiros, optou-se por usar o tipo B-Tree.
+* servico_subtipo_servico [Linha 7]: Aplicação do índice “idx_fk_servico_sss”, custo de 8.46.
+* servico [Linha 5]: Aplicação do índice “idx_fk_usuario_servico”, custo de 8.44.
+* info_profissional [Linha 15]: Aplicação do índice “idx_fk_usuario_info_pro”, custo de 8.46.<br>
+
+Importante notar que o tempo de planejamento foi cerca de 2.47 maior que o tempo de execução.<br>
+
 Tempo de planejamento e de execução da QUERY 2 [sem índice, com B-Tree, GIN e GiST]:
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/tabela_2.png"></p><br>
+
+### QUERY #3<br>
 
 ```sql
 --Consulta 3: Buscando todos serviços de um determinado tipo.
@@ -739,12 +789,38 @@ INNER JOIN SUBTIPO_SERVICO AS SS ON SS.ID = SBS.FK_SUBTIPO_SERVICO
 INNER JOIN TIPO_SERVICO AS TS ON TS.ID = SS.FK_TIPO_SERVICO
 WHERE SBS.fk_servico = 666566;
 ```
+
+#### SEM índice:
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/SEM_INDICE/3_explain.png"></p>
+
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/SEM_INDICE/3_analyze.png"></p><br>
+
+Pontos relevantes:
+* servico_subtipo_servico [Linha 9]: Dos 15174.45 de custo total, 14171.86(93.39%) é originário da busca sequencial por uma chave estrangeira específica.
+* A consulta só não foi mais custosa pelo fato do planejador utilizar os índices nativos nas cláusulas “ON” dos join’s [Linhas 13, 15, 18].<br><br>
+
+#### COM índice (B-Tree):
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/BTREE/3_explain.png"></p>
+
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/EXPLAIN/BTREE/3_analyze.png"></p><br>
+
+Boa parte dos procedimentos foram semelhantes aos do teste acima, sem o uso de índices:
+* O planejador decidiu utilizar os índices nativos nas tabelas “servico”, “usuario”, “tipo_servico” [Linhas 6, 8, 15].
+* Somente no caso da tabela “servico_subtipo_servico”, responsável pelo gargalo na consulta sem índice, que o planejador decidiu aplicar o índice “personalizado”.
+* Um ponto curioso é a aplicação de hash na tabela “subtipo_servico”. Pela estrutura da query, do diagrama e pelo fato da tabela “servico_subtipo_servico” representar uma relação N para N (entre “servico” e “subtipo_servico”), é possível cogitar que o planejador aplicou o hash join para relacionar um (ou mais) subtipo procurado a um conjunto de serviços.
+* Seq Scan [Linha 14]: Como a tabela “subtipo_servico” têm apenas 38 linhas candidatas, o planejador pode ter inferido que a busca sequencial seria menos custosa que uma ordenação e busca binária, operações necessárias para indexação.<br>
+
 Tempo de planejamento e de execução da QUERY 3 [sem índice, com B-Tree, GIN e GiST]:
 <p align="center">
 <img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM98/tabela_3.png"></p><br>
 
-Embora tenham sido criados vários índices, 3 querys foram analisadas, devido alto tempo de pesquisa, diversas possibilidades que o planejador oferece de acordo com o dados da cláusula WHERE e tempo para tabelar os resultados.
+Embora tenham sido criados vários índices, 3 querys foram analisadas, devido alto tempo de pesquisa, diversas possibilidades que o planejador oferece de acordo com o dados da cláusula WHERE e tempo para tabelar os resultados.<br>
 
+Após realizar os testes apresentados nas tabelas acima e diversos outros, foi possível notar que o tipo B-Tree se mostrou como o mais eficiente para buscas envolvendo operadores "primitivos", enquanto que buscas mais elaboradas envolvendo parte ('%TEXTO', '%TEXTO%', 'TEXTO%') de um texto, se mostraram com maior desempenho quando o tipo GIN (e segundamente, GiST) foi empregado. Portanto, decidiu-se criar índices GIN para colunas textuais, e B-Tree, para demais colunas.<br>
 
 ## Data de Entrega: (22/11/2018)
 
@@ -844,14 +920,11 @@ WIKIPÉDIA. “Discagem direta a distância”. Acesso em 12/11/2018. Disponíve
 
 #### Os usuários criados no GIT devem possuir o nome de identificação do aluno (não serão aceitos nomes como Eu123, meuprojeto, pro456, etc). Em caso de dúvida comunicar o professor.
 
-
 Link para BrModelo:<br>
-http://sis4.com/brModelo/brModelo/download.html
-<br>
-
+http://sis4.com/brModelo/brModelo/download.html<br>
 
 Link para curso de GIT<br>
-![https://www.youtube.com/curso_git](https://www.youtube.com/playlist?list=PLo7sFyCeiGUdIyEmHdfbuD2eR4XPDqnN2?raw=true "Title")
+[https://www.youtube.com/curso_git](https://www.youtube.com/playlist?list=PLo7sFyCeiGUdIyEmHdfbuD2eR4XPDqnN2?raw=true "Title")
 
 
 
