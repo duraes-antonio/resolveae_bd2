@@ -12,4 +12,4 @@ AS(
 	INNER JOIN bairro ON bairro.id = endereco.fk_bairro
 	INNER JOIN cidade ON cidade.id = bairro.fk_cidade
 	INNER JOIN estado ON estado.id = cidade.fk_estado
-)
+);
