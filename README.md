@@ -2,6 +2,8 @@
 
 Repositório com foco na disciplina de Banco de Dados 2 (referente ao trabalho integrado do 5º período - BSI - IFES).
 
+[Apresentação - Índices](https://docs.google.com/presentation/d/1YCTNRDP96DFPy8tgIGvsNvmMCEtBmzhQgslKrAIP8Wk/edit?usp=sharing)
+
 > O referido projeto poderá ser:
 > 1. Um novo sistema/projeto<br>
 > 2. Uma expansão de sistema/projeto previamente desenvolvido em disciplinas anteriores (ex: Expansão dos módulos do sistema desenvolvidos em BD1 - incremento mínimo de 50% nos requisitos/complexidade)<br>
@@ -684,6 +686,8 @@ A configuração da máquina e do sistema usado no testes estão logo abaixo.
 > d) Escolher as consultas mais complexas para serem analisadas (consultas com menos de 2 joins não serão aceitas).<br>
 > e) As imagens do Explain devem ser inclusas no trabalho, bem como explicações sobre os resultados obtidos.<br>
 > f) Inclusão de tabela mostrando as 10 execuções, excluindo-se o maior e menor tempos para cada consulta e obtendo-se a media dos outros valores como resultado médio final.<br>
+
+[Apresentação - Índices - G. Presentation](https://docs.google.com/presentation/d/1YCTNRDP96DFPy8tgIGvsNvmMCEtBmzhQgslKrAIP8Wk/edit?usp=sharing)<br>
 
 * OBS.: A lista de índices criados (8, no total), podem ser conferidas [aqui](https://github.com/duraes-antonio/resolveae_bd2/blob/master/TESTE%20INDICE/QUERY/indices.sql) e a lista de consultas que origiram as examinadas abaixo encontram-se [aqui](https://github.com/duraes-antonio/resolveae_bd2/blob/master/TESTE%20INDICE/QUERY/QUERYS_TESTE_INDICE.sql). Os prints com registro do tempo de execução, criação e explain podem ser conferidos [neste link](https://github.com/duraes-antonio/resolveae_bd2/tree/master/DOCUMENTOS/IMAGENS/ITEM98).<br>
 
