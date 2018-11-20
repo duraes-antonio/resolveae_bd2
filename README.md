@@ -621,7 +621,15 @@ DEPOIS DE EFETUAR A ALTERACAO
 > e) especificar a quantidade de registros inseridos em cada tabela<br>
 > Para melhor compreensão verifiquem o exemplo na base de testes:<br>
 > https://github.com/discipbd2/base-de-testes-locadora<br>
-        
+
+* O processo de inserção no banco foi realizado 5 vezes, assim, foi possível calcular a média e desvio padrão.
+* O consumo de memória varia de acordo com os tipos das colunas da tabela e a quantidade de registros por bloco de inserção (como citado anteriormente, blocos de 500 mil registros).
+* Tabelas(estado, cidade, dia_semana, tipo_servico, ...) com poucos registros  não tiveram seu tempo registro devido a velocidade alta de execução do comando.
+* Células em verde indicam tempos até 50 segundos; em amarelo, até 100; alaranjado, até 150; em vermelho, superiores a 150.<br>
+
+<p align="center">
+<img src="https://github.com/duraes-antonio/resolveae_bd2/blob/master/DOCUMENTOS/IMAGENS/ITEM96/tabela_dados.png"></p><br>
+
 ## Data de Entrega: (31/10/2018)
 
 #### 9.7 Backup do Banco de Dados<br>
@@ -658,7 +666,7 @@ time psql -d NOME_DATABASE_NOVO -f NOME_ARQ_SQL_UNICO.sql
 SELECT pg_database_size('NOME_DATABASE');
 ```
 
-O tamanho da base de dados após todas inserções é de aprox. 1319.216 MiB (1383298535 bytes) [11M 877k 197 registros].
+O tamanho da base de dados após todas inserções é de aprox. 1319.216 MiB (1383298535 bytes).
 
 O tempo gasto para criar o backup, restaurar a base e o tamanho do arquivo de backup e do SQL estão na tabela abaixo.
 <p align="center">
