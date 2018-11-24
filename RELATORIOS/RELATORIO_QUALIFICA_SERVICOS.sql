@@ -1,0 +1,9 @@
+﻿SELECT TIP.nome AS "QUALIFICACAO",COUNT(DISTINCT S.id)AS "SERVICOS CADASTRADOS" FROM SERVICO AS S
+INNER JOIN USUARIO AS U ON U.id = S.fk_usuario
+INNER JOIN info_profissional AS IP ON IP.fk_usuario = U.id
+INNER JOIN tipo_info_profissional AS TIP ON TIP.id = IP.fk_tipo_info_prof
+WHERE 1=1
+AND TIP.id >= 1
+AND TIP.ID<=4
+GROUP BY TIP.nome
+ORDER BY "SERVICOS CADASTRADOS"
