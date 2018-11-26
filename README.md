@@ -645,12 +645,12 @@ DEPOIS DE EFETUAR A ALTERACAO
 
 * OBS. 1: Os comandos foram executados diretamente em linha de comando via PSQL.
 * OBS. 2: Com exceção do PSQL, apenas os processos do SO e duas abas (que não emitem notificações) do navegador estavam abertas.
-* OBS. 3: A restauração com SQL foi feita usando arquivo ÚNICO contendo os CREATEs e INSERTs(em blocos de 500 mil registros) de cada entidade.
-* OBS. 4: O formato customizado/dump (parâmetro "-Fc") foi escolhido para backup.
+* OBS. 3: O parâmetro "-Fc" gera o arquivo de backup customizado.
+* OBS. 4: O parâmetro "-Fp" gera o arquivo de backup plano(em SQL).
 * OBS. 5: Para mensurar o tempo gasto na execução dos comandos foi utilizado o comando "time" (presente em boa parte das distribuições Linux).<br>
 
-[script_unico_create_insert](https://drive.google.com/open?id=1b3JMyIVVsNKCD-pDoVGQalPUd5SD8XJh)[Sem índices]<br>
-[arquivo_backup](https://drive.google.com/open?id=1Lwb7tDdXAJW39Ba7K4YqXNtxMx459s4h)[Sem índices]<br>
+[arquivo_backup_sql_plano](https://drive.google.com/open?id=1lXYjP_BOJDat4nKarl9CcavWbwD9hjbY)[Sem índices]<br>
+[arquivo_backup_custom](https://drive.google.com/open?id=1Lwb7tDdXAJW39Ba7K4YqXNtxMx459s4h)[Sem índices]<br>
 
 ```shell
 Comando p/ gerar backup:
@@ -659,8 +659,11 @@ time pg_dump -Fc NOME_DATABASE > NOME_ARQ_SAIDA.dump -O -x
 Comando p/ restauração (c/ Backup):
 time pg_restore -d NOME_DATABASE_NOVO NOME_ARQ_BACKUP.dump
 
-Comando p/ recriação (c/ SQL):
-time psql -d NOME_DATABASE_NOVO -f NOME_ARQ_SQL_UNICO.sql
+Comando p/ gerar backup (c/ SQL Plano):
+time pg_dump -Fp NOME_DATABASE > NOME_ARQ_SAIDA -O -x
+
+Comando p/ restauração (c/ SQL Plano):
+time psql NOME_DATABASE_NOVO < NOME_ARQ_BACKUP_PLANO
 ```
 
 ```sql
