@@ -619,7 +619,7 @@ Para a administração do banco serão criados 3 grupos, nos quais serão distri
 
 <p align="center">
     
-| GRUPO                 | FUNCIONALIDADES                                             |
+| GRUPO                 | FUNCIONALIDADES                                                       |
 | ----------------------| ----------------------------------------------------------------------|
 |ADMINISTRADORES          |TODAS AS FUNCIONALIDADES.|
 |DEV           | TODAS FUNCIONALIDADES EXCEÇÃO DE DROP E DELETE.|
@@ -627,6 +627,19 @@ Para a administração do banco serão criados 3 grupos, nos quais serão distri
 
 </p>
 O grupo administrador será voltado para os DBA's do sistema, sendo assim necessário acesso a todas funcionalidades do banco. Já o grupo de dev ser voltado justamente para os desenvolvedores, onde será limitado apenas o privilegio de apagar as coisas. Já o grupo usuario_base será para novos integrantes da equipe, dando apenas a possibilidade para o usuário de conhecer o banco para só após participar de outro grupo, mantendo assim a integridade dos dados.<br><br>
+
+A maquina recomendada para primeiro servidor da aplicação, visando o baixo orçamento que estará presente é a sequinte
+<p align="center">
+
+| HARDWARE			            | ESPECIFICAÇÃO								                            |
+| ------------------------------| ----------------------------------------------------------------------|
+| CPU| INTEL COFFEE LAKE DUAL  CORE.|
+| MEMORIA RAM| 4 GB DDR4.|
+| HDD| 500 GB SATA3.|
+| SSD| 120 GB SATA3.|
+
+</p>
+A configuração exposta se da devido os sequentes motivos, por se tratar de sistema novo não haverá muitas requisições simultâneas, sendo suficiente um processador de 2 núcleos (sabendo que um único núcleo da Intel é o mais potente no mercado atualmente), o consumo de memória não é elevado para um ambiente de produção, visto que o consumo só se eleva com um grande número de inserções (como visto durante a elaboração do banco, o consumo de memória só elevado ao inserir um número maior do que 500mil em uma única inserção). A utilização de HDD e SDD se da visando evitar gargalos nas querys durante o uso, podendo fazer um balanceamento de recurso mantendo o SDD ativo durante horários de maior acesso e em horários de menor acesso transferir os dados para o HDD(onde o tamanho x custo é menor do que o SDD).<br><br>
 
 #### 9.6 GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
 > a) principal tabela do sistema deve ter no mínimo 1,5 milhão de registros<br>
