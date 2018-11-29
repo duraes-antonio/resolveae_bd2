@@ -626,7 +626,7 @@ a)Para a administração do banco serão criados 3 grupos, nos quais serão dist
 |NOVOS_USUARIOS          |APENAS SELECT.|
 
 </p>
-O grupo administrador será voltado para os DBA's do sistema, sendo assim necessário acesso a todas funcionalidades do banco. Já o grupo de dev ser voltado justamente para os desenvolvedores, onde será limitado apenas o privilegio de apagar as coisas. Já o grupo usuario_base será para novos integrantes da equipe, dando apenas a possibilidade para o usuário de conhecer o banco para só após participar de outro grupo, mantendo assim a integridade dos dados.<br><br>
+O grupo administrador será voltado para os DBA's do sistema, sendo assim necessário acesso a todas funcionalidades do banco. Já o grupo de dev ser voltado justamente para os desenvolvedores, onde será limitado apenas o privilegio de apagar as coisas. Já o grupo usuario_base será para novos integrantes da equipe, dando apenas a possibilidade para o usuário de conhecer o banco para só após participar de outro grupo, mantendo assim a integridade dos dados. [SQL GRUPOS](https://github.com/duraes-antonio/resolveae_bd2/blob/master/SQL/groups_privilege.sql)<br><br>
 
 A maquina recomendada para primeiro servidor da aplicação, visando o baixo orçamento que estará presente é a sequinte
 <p align="center">
