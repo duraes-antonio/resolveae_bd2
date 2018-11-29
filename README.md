@@ -615,6 +615,19 @@ DEPOIS DE EFETUAR A ALTERACAO
 > c) Planejamento de rotinas de manutenção e monitoramento do banco<br>
 > d) Plano com frequencia de análises visando otimização de performance<br>
 
+Para a administração do banco serão criados 3 grupos, nos quais serão distribuidos para as pessoas envolvidas no sistema, são esses os grupos:<br>
+
+<p align="center">
+    
+| GRUPO                 | FUNCIONALIDADES                                             |
+| ----------------------| ----------------------------------------------------------------------|
+|ADMINISTRADORES          |TODAS AS FUNCIONALIDADES.|
+|DEV           | TODAS FUNCIONALIDADES EXCEÇÃO DE DROP E DELETE.|
+|NOVOS_USUARIOS          |APENAS SELECT.|
+
+</p>
+O grupo administrador será voltado para os DBA's do sistema, sendo assim necessário acesso a todas funcionalidades do banco. Já o grupo de dev ser voltado justamente para os desenvolvedores, onde será limitado apenas o privilegio de apagar as coisas. Já o grupo usuario_base será para novos integrantes da equipe, dando apenas a possibilidade para o usuário de conhecer o banco para só após participar de outro grupo, mantendo assim a integridade dos dados.<br><br>
+
 #### 9.6 GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
 > a) principal tabela do sistema deve ter no mínimo 1,5 milhão de registros<br>
 > b) tabelas diretamente relacionadas a tabela principal 100 mil registros<br>
