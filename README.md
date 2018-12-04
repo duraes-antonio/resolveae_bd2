@@ -615,6 +615,39 @@ DEPOIS DE EFETUAR A ALTERACAO
 > c) Planejamento de rotinas de manutenção e monitoramento do banco<br>
 > d) Plano com frequencia de análises visando otimização de performance<br>
 
+a)Para a administração do banco serão criados 3 grupos, nos quais serão distribuidos para as pessoas envolvidas no sistema, são esses os grupos:<br>
+
+<p align="center">
+    
+| GRUPO                 | FUNCIONALIDADES                                                       |
+| ----------------------| ----------------------------------------------------------------------|
+|ADMINISTRADORES          |TODAS AS FUNCIONALIDADES.|
+|DEV           | TODAS FUNCIONALIDADES EXCEÇÃO DE DROP E DELETE.|
+|NOVOS_USUARIOS          |APENAS SELECT.|
+</p><br>
+
+O grupo administrador será voltado para os DBA's do sistema, sendo assim necessário acesso a todas funcionalidades do banco. Já o grupo de dev ser voltado justamente para os desenvolvedores, onde será limitado apenas o privilegio de apagar as coisas. Já o grupo usuario_base será para novos integrantes da equipe, dando apenas a possibilidade para o usuário de conhecer o banco para só após participar de outro grupo, mantendo assim a integridade dos dados.   [SQL GRUPOS](https://github.com/duraes-antonio/resolveae_bd2/blob/master/SQL/groups_privilege.sql). 
+<br><br>
+
+
+A maquina recomendada para primeiro servidor da aplicação, visando o baixo orçamento que estará presente é a sequinte
+<p align="center">
+
+| HARDWARE			            | ESPECIFICAÇÃO								                            |
+| ------------------------------| ----------------------------------------------------------------------|
+| CPU| INTEL COFFEE LAKE DUAL  CORE.|
+| MEMORIA RAM| 4 GB DDR4.|
+| HDD| 500 GB SATA3.|
+| SSD| 120 GB SATA3.|
+</p><br>
+
+b) A configuração exposta se da devido os sequentes motivos, por se tratar de sistema novo não haverá muitas requisições simultâneas, sendo suficiente um processador de 2 núcleos (sabendo que um único núcleo da Intel é o mais potente no mercado atualmente), o consumo de memória não é elevado para um ambiente de produção, visto que o consumo só se eleva com um grande número de inserções (como visto durante a elaboração do banco, o consumo de memória só elevado ao inserir um número maior do que 500mil em uma única inserção). A utilização de HDD e SDD se da visando evitar gargalos nas querys durante o uso, podendo fazer um balanceamento de recurso mantendo o SDD ativo durante horários de maior acesso e em horários de menor acesso transferir os dados para o HDD(onde o tamanho x custo é menor do que o SDD).<br>
+
+c) Como a solicitação de serviços de reparos, informatização de processos e criação de aplicações aumenta de acordo com o número de pessoas que visam adquirir novos dispositivos, aumentar a informatização de suas organizações ou renovar sua imagem, o uso do sistema tende a aumentar com o tempo. E como boa parte das pessoas trabalham durante horário comercial/dia útil, a manutenção ocorrerá durante os fins de semana e feriados para reduzir o impacto para os usuários. A princípio o monitoramento pode ocorrer mensalmente, com o crescimento do sistema após um ou mais anos, a ação pode ocorrer semanalmente.<br>
+
+d) Para analisar a performance do banco é necessário acumular uma quantidade significativa de informações sobre as operações executadas, portanto, enquanto não houver problemas perceptíveis de desempenho, as análises podem ocorrer mensalmente. Para realizar a análise além de usar os comandos "EXPLAIN" e "ANALYZE", também serão utilizados os logs, onde é possível verificar os comandos executados e o tempo de execução, gerados pelo próprio SGBD.<br><br>
+
+
 #### 9.6 GERACAO DE DADOS (MÍNIMO DE 1,5 MILHÃO DE REGISTROS PARA PRINCIPAL RELAÇAO)<br>
 > a) principal tabela do sistema deve ter no mínimo 1,5 milhão de registros<br>
 > b) tabelas diretamente relacionadas a tabela principal 100 mil registros<br>
