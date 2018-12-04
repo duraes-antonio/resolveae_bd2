@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION insert_endereco
+CREATE OR REPLACE FUNCTION salvar_endereco
 (bairro_nome VARCHAR, cidade_nome VARCHAR, estado VARCHAR, cep_novo INTEGER, usuario_id INTEGER)
 RETURNS INTEGER
 AS $$
