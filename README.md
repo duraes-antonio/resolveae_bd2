@@ -875,6 +875,13 @@ Após realizar os testes apresentados nas tabelas acima e diversos outros, foi p
 <br>   
 
 #### 9.9 TRABALHO EM DUPLA - Machine Learning e Data Mining
+
+Optamos por apresentar dicas para acelerar buscas por valores textuais, com a abordagem da extensão "pg_trgm", utilizada para cálculo de similaridade de texto e acelerar índices em colunas textuais.<br>
+
+Slides:<br>
+[G. Drive](https://docs.google.com/presentation/d/1YYrr3t53pP9jqhFYSi4THKHPpWh6wzYSu_tXG0HsBA8/edit?usp=sharing)<br>
+[Arquivo](https://github.com/duraes-antonio/resolveae_bd2/blob/master/TRAB_DUPLA/apresentacao_trab_2_trigrama.pdf)<br>
+
 ### Estudar algum dos algoritmos abaixo
 ### Incluir no trabalho os seguintes tópicos: 
 * Explicação/Fundamentação teórica sobre o método, objetivos e restrições! (formato doc/odt ou PDF)
@@ -973,6 +980,3 @@ http://sis4.com/brModelo/brModelo/download.html<br>
 
 Link para curso de GIT<br>
 [https://www.youtube.com/curso_git](https://www.youtube.com/playlist?list=PLo7sFyCeiGUdIyEmHdfbuD2eR4XPDqnN2?raw=true "Title")
-
-
-
