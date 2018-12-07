@@ -2,7 +2,10 @@
 
 Repositório com foco na disciplina de Banco de Dados 2 (referente ao trabalho integrado do 5º período - BSI - IFES).
 
-[Apresentação - Índices](https://docs.google.com/presentation/d/1YCTNRDP96DFPy8tgIGvsNvmMCEtBmzhQgslKrAIP8Wk/edit?usp=sharing)
+Apresentações e entregas:<br>
+[Apresentação - Índices](https://docs.google.com/presentation/d/1YCTNRDP96DFPy8tgIGvsNvmMCEtBmzhQgslKrAIP8Wk/edit?usp=sharing)<br>
+[Apresentação - Trab. Dupla](https://docs.google.com/presentation/d/1YYrr3t53pP9jqhFYSi4THKHPpWh6wzYSu_tXG0HsBA8/edit?usp=sharing)<br>
+[Relatórios](https://github.com/duraes-antonio/resolveae_bd2/blob/master/RELATORIOS/relatorios.ipynb)<br>
 
 > O referido projeto poderá ser:
 > 1. Um novo sistema/projeto<br>
